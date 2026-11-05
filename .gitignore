@@ -4,6 +4,9 @@ __pycache__/
 cache/
 logs/
 recordings/
-raw/
+raw/**
+!raw/**/
+!raw/**/.gitkeep
+!raw/README.md
 assets/prompts/*.wav
 assets/prompts/*.mock
