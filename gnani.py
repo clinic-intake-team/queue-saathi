@@ -6,6 +6,9 @@ import io
 import json
 import mimetypes
 import os
+import re
+import shutil
+import subprocess
 from pathlib import Path
 import time
 import wave
@@ -18,6 +21,7 @@ ROOT = Path(__file__).resolve().parent
 load_dotenv(ROOT / '.env')
 BASE = 'https://api.vachana.ai'
 _REAL_SCRIPT = False
+STATS = {'real_calls': 0, 'cache_hits': 0}
 
 
 def _mock():
@@ -36,6 +40,25 @@ def _seconds(audio):
         return ''
 
 
+def _file_seconds(path, audio):
+    seconds = _seconds(audio)
+    if seconds != '':
+        return seconds
+    if shutil.which('ffprobe'):
+        command = ['ffprobe', '-v', 'error', '-show_entries', 'format=duration',
+                   '-of', 'default=noprint_wrappers=1:nokey=1', str(path)]
+    elif shutil.which('afinfo'):
+        command = ['afinfo', str(path)]
+    else:
+        return ''
+    try:
+        output = subprocess.check_output(command, text=True, stderr=subprocess.DEVNULL)
+        match = re.search(r'estimated duration:\s*([\d.]+)', output)
+        return float(match[1] if match else output.strip())
+    except (subprocess.SubprocessError, ValueError, OSError):
+        return ''
+
+
 def _post(endpoint, *, audio_seconds='', chars=0, **kwargs):
     key = os.getenv('GNANI_API_KEY', '').strip()
     if not key:
@@ -43,6 +66,7 @@ def _post(endpoint, *, audio_seconds='', chars=0, **kwargs):
     for attempt in range(3):
         response = None
         try:
+            STATS['real_calls'] += 1
             response = requests.post(
                 BASE + endpoint, headers={'X-API-Key-ID': key},
                 timeout=(15, 120), allow_redirects=False, **kwargs,
@@ -66,7 +90,7 @@ def _post(endpoint, *, audio_seconds='', chars=0, **kwargs):
                 writer.writerow([datetime.now(timezone.utc).isoformat(), endpoint,
                                  audio_seconds, chars, request_id,
                                  response.status_code if response is not None else 'network_error'])
-        if response.status_code in (429, 500, 503) and attempt < 2:
+        if (response.status_code == 429 or 500 <= response.status_code < 600) and attempt < 2:
             time.sleep(2 ** attempt)
             continue
         response.raise_for_status()
@@ -75,13 +99,13 @@ def _post(endpoint, *, audio_seconds='', chars=0, **kwargs):
         return response
 
 
-def stt(wav_path, keyterms=None, context=None):
-    """Return Prisma JSON, preserving digits and Hindi number words verbatim."""
-    mock = _mock()
-    path = Path(wav_path)
-    audio = path.read_bytes()
+def stt_cache_path(wav_path, keyterms=None, context=None, *, mock=False):
+    """Compute the exact cache path without enabling networking."""
+    audio = Path(wav_path).read_bytes()
     fields = {'model': 'prisma-v3.0', 'language_code': 'hi-IN,en-IN', 'format': 'transcribe'}
     if keyterms is not None:
+        if not isinstance(keyterms, list) or len(keyterms) > 200 or any(not isinstance(term, str) for term in keyterms):
+            raise ValueError('keyterms must be a JSON array of at most 200 strings')
         fields['keyterms'] = json.dumps(keyterms, ensure_ascii=False)
     if context is not None:
         fields['previous_text'] = str(context)[-600:]
@@ -89,14 +113,28 @@ def stt(wav_path, keyterms=None, context=None):
     digest = hashlib.sha256(audio + json.dumps(
         {'fields': fields, 'mode': 'mock' if mock else 'real'},
         sort_keys=True, ensure_ascii=False).encode()).hexdigest()
-    cache = ROOT / 'cache/stt' / f'{digest}.json'
+    return ROOT / 'cache/stt' / f'{digest}.json'
+
+
+def stt(wav_path, keyterms=None, context=None):
+    """Return Prisma JSON, preserving digits and Hindi number words verbatim."""
+    mock = _mock()
+    path = Path(wav_path)
+    audio = path.read_bytes()
+    cache = stt_cache_path(path, keyterms, context, mock=mock)
+    fields = {'model': 'prisma-v3.0', 'language_code': 'hi-IN,en-IN', 'format': 'transcribe'}
+    if keyterms is not None:
+        fields['keyterms'] = json.dumps(keyterms, ensure_ascii=False)
+    if context is not None:
+        fields['previous_text'] = str(context)[-600:]
     if cache.exists():
+        STATS['cache_hits'] += 1
         return json.loads(cache.read_text(encoding='utf-8'))
     if mock:
         name = 'with_keyterms.json' if keyterms else 'without_keyterms.json'
         result = json.loads((ROOT / 'data/mock' / name).read_text(encoding='utf-8'))
     else:
-        response = _post('/stt/v3', audio_seconds=_seconds(audio), data=fields,
+        response = _post('/stt/v3', audio_seconds=_file_seconds(path, audio), data=fields,
                          files={'audio_file': (path.name, audio, mimetypes.guess_type(path.name)[0] or 'application/octet-stream')})
         result = response.json()
     cache.parent.mkdir(parents=True, exist_ok=True)

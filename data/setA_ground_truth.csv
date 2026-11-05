@@ -1,0 +1,21 @@
+clip_id,medicines,notes
+M01,"[{""name"": ""Telma"", ""strength"": ""40""}]",Brand + Hindi number
+M02,"[{""name"": ""Dolo"", ""strength"": ""650""}]","Large spoken number (""chhe sau pachaas"")"
+M03,"[{""name"": ""Glycomet"", ""strength"": ""500""}, {""name"": ""Thyronorm"", ""strength"": ""50""}]","Two meds, two strengths"
+M04,"[{""name"": ""Pan"", ""strength"": ""40""}, {""name"": ""Ecosprin"", ""strength"": ""75""}]",Two meds with timing words
+M05,"[{""name"": ""Amlong"", ""strength"": ""5""}]",Short brand name
+M06,"[{""name"": ""Metformin"", ""strength"": """"}, {""name"": ""Atorvastatin"", ""strength"": """"}]",Generic names
+M07,"[{""name"": ""Montair LC"", ""strength"": """"}, {""name"": ""Asthalin"", ""strength"": """"}]","Brand with letters, ""pump"""
+M08,"[{""name"": ""Shelcal"", ""strength"": """"}, {""name"": ""Uprise D3"", ""strength"": """"}]",Supplements
+M09,"[{""name"": ""Thyronorm"", ""strength"": ""25""}]",Single med
+M10,"[{""name"": ""Janumet"", ""strength"": """"}, {""name"": ""Ecosprin"", ""strength"": """"}]",Similar-sounding brands
+M11,"[{""name"": ""name_unknown"", ""strength"": """", ""purpose"": ""BP""}, {""name"": ""Pantocid"", ""strength"": """"}]",Unknown name → purpose; name_unknown/none excluded from raw STT scoring; retained for pipeline evaluation
+M12,"[{""name"": ""Combiflam"", ""strength"": """"}]",Occasional use
+M13,"[{""name"": ""Azithral"", ""strength"": ""500""}]",Antibiotic + duration noise
+M14,"[{""name"": ""Crocin"", ""strength"": """"}, {""name"": ""Cetzine"", ""strength"": """"}]",Cold meds
+M15,"[{""name"": ""Rosuvas"", ""strength"": ""10""}, {""name"": ""Clopilet"", ""strength"": ""75""}]","Hard names, two strengths"
+M16,"[{""name"": ""Glycomet"", ""strength"": """"}, {""name"": ""name_unknown"", ""strength"": """", ""purpose"": ""sugar""}]",Partly known; name_unknown/none excluded from raw STT scoring; retained for pipeline evaluation
+M17,"[{""name"": ""Budecort"", ""strength"": """"}, {""name"": ""Deriphyllin"", ""strength"": """"}]",Rare names
+M18,"[{""name"": ""Lantus"", ""strength"": """"}, {""name"": ""Glycomet"", ""strength"": """"}]",Injection + tablet
+M19,"[{""name"": ""none"", ""strength"": """"}]",Empty answer; name_unknown/none excluded from raw STT scoring; retained for pipeline evaluation
+M20,"[{""name"": ""Amlong"", ""strength"": """"}]",Self-correction; corrected Telma is not ground truth
