@@ -1,0 +1,13 @@
+clip_id,question,expected_status,expected_value,expected_red_flag,notes
+C01,P2,unclear,{},n.a.,Source expectation: unclear → app asks again; Audio/connectivity question; request clarification.
+C02,P1,declined,{},n.a.,"Source expectation: age declined, not guessed; Age declined; do not guess age."
+C03,P5,question,{},n.a.,Source expectation: treated as a question; Patient asks why medicine information is requested.
+C04,P1,ok,"{""age"": 52}",n.a.,Source expectation: age 52; Hindi number baavan = 52.
+C05,P3,ok,"{""duration_days"": 2}",n.a.,Source expectation: 2 days; Parson se = 2 days.
+C06,P3,ok,"{""duration_days"": 7}",n.a.,Source expectation: about 7 days; Approximate duration: about 7 days (pichhle hafte se).
+C07,P2,ok,"{""complaint"": ""severe headache since Monday""}",n.a.,Source expectation: complaint captured; Preserve since Monday; do not infer a calendar date.
+C08,P4,ok,"{""red_flag_reason"": ""breathlessness""}",yes,Source expectation: **RED FLAG** (breathlessness); Breathlessness with difficulty climbing stairs.
+C09,P4,ok,"{""red_flag_reason"": ""vomiting blood""}",yes,"Source expectation: **RED FLAG** (vomiting blood); Vomiting blood, even when described as yesterday."
+C10,P2,ok,"{""complaint"": ""throat pain + mild fever""}",n.a.,Source expectation: complaint captured despite noise; Noisy background. User-specified complaint overrides the generic recording card.
+C11,P4,ok,"{""fainting"": false, ""symptom"": ""mild dizziness""}",no,Source expectation: **no** red flag (negation + mild symptom); Fainting explicitly denied; negation must not trigger a red flag.
+C12,P2,ok,"{""complaint"": ""cough worse at night + evening fever + weakness""}",n.a.,Source expectation: all symptoms captured; Capture all three symptoms and timing; user-specified expectation refines the generic recording card.

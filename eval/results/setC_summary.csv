@@ -1,0 +1,7 @@
+condition,speaker,status_correct,status_total,status_accuracy,value_correct,value_total,value_accuracy,red_flags_caught,red_flags_total,false_alarms,false_alarm_total,silently_wrong,safe_miss,needs_check,clips_with_invalid_fields
+symptom_keyterms_off,overall,22,24,0.9166666666666666,21,24,0.875,4,4,0,2,1,2,1,1
+symptom_keyterms_off,ch,12,12,1.0,12,12,1.0,2,2,0,1,0,0,0,0
+symptom_keyterms_off,tm,10,12,0.8333333333333334,9,12,0.75,2,2,0,1,1,2,1,1
+symptom_keyterms_on,overall,23,24,0.9583333333333334,22,24,0.9166666666666666,4,4,0,2,1,1,0,0
+symptom_keyterms_on,ch,12,12,1.0,11,12,0.9166666666666666,2,2,0,1,1,0,0,0
+symptom_keyterms_on,tm,11,12,0.9166666666666666,11,12,0.9166666666666666,2,2,0,1,0,1,0,0

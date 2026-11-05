@@ -1,0 +1,152 @@
+[
+  {
+    "question": "P1",
+    "transcript": "Main purush hoon, umar sixty eight saal.",
+    "extracted": {
+      "age": {
+        "value": 68,
+        "status": "ok",
+        "evidence": "sixty eight"
+      },
+      "sex": {
+        "value": "male",
+        "status": "ok",
+        "evidence": "purush"
+      }
+    },
+    "red_flags": {
+      "alert": false,
+      "keyword_flags": [],
+      "llm_flags": []
+    }
+  },
+  {
+    "question": "P1",
+    "transcript": "Mujhe apni umar nahi batani.",
+    "extracted": {
+      "age": {
+        "value": null,
+        "status": "declined",
+        "evidence": "Mujhe apni umar nahi batani."
+      },
+      "sex": {
+        "value": null,
+        "status": "unclear",
+        "evidence": ""
+      }
+    },
+    "red_flags": {
+      "alert": false,
+      "keyword_flags": [],
+      "llm_flags": []
+    }
+  },
+  {
+    "question": "P5",
+    "transcript": "Is sawaal ka jawab dena zaroori hai kya?",
+    "extracted": {
+      "medicines": {
+        "value": null,
+        "status": "question",
+        "evidence": "Is sawaal ka jawab dena zaroori hai kya?"
+      }
+    },
+    "red_flags": {
+      "alert": false,
+      "keyword_flags": [],
+      "llm_flags": []
+    }
+  },
+  {
+    "question": "P2",
+    "transcript": "Umm... hmm... bas...",
+    "extracted": {
+      "complaint": {
+        "value": null,
+        "status": "unclear",
+        "evidence": ""
+      }
+    },
+    "red_flags": {
+      "alert": false,
+      "keyword_flags": [],
+      "llm_flags": []
+    }
+  },
+  {
+    "question": "P3",
+    "transcript": "Pichhle hafte se pet mein jalan ho rahi hai.",
+    "extracted": {
+      "duration_days": {
+        "value": 7,
+        "status": "ok",
+        "evidence": "Pichhle hafte se"
+      }
+    },
+    "red_flags": {
+      "alert": false,
+      "keyword_flags": [],
+      "llm_flags": []
+    }
+  },
+  {
+    "question": "P2",
+    "transcript": "Kal dopahar se baaye kaan mein dard hai, sunai bhi kam de raha hai.",
+    "extracted": {
+      "complaint": {
+        "value": {
+          "summary": "Left ear pain and reduced hearing since yesterday afternoon",
+          "symptoms": [
+            "left ear pain (since yesterday afternoon)",
+            "reduced hearing in left ear (since yesterday afternoon)"
+          ]
+        },
+        "status": "ok",
+        "evidence": "Kal dopahar se baaye kaan mein dard hai, sunai bhi kam de raha hai."
+      }
+    },
+    "red_flags": {
+      "alert": false,
+      "keyword_flags": [],
+      "llm_flags": []
+    }
+  },
+  {
+    "question": "P4",
+    "transcript": "Seene mein dard nahi, saans bhi theek hai; halka sar bhaari hai.",
+    "extracted": {
+      "red_flag_symptoms": {
+        "value": [],
+        "status": "ok",
+        "evidence": "Seene mein dard nahi"
+      }
+    },
+    "red_flags": {
+      "alert": false,
+      "keyword_flags": [],
+      "llm_flags": []
+    }
+  },
+  {
+    "question": "P4",
+    "transcript": "Behosh nahi hua, lekin saans lene mein bahut takleef hai.",
+    "extracted": {
+      "red_flag_symptoms": {
+        "value": [
+          "breathlessness"
+        ],
+        "status": "ok",
+        "evidence": "saans lene mein bahut takleef hai"
+      }
+    },
+    "red_flags": {
+      "alert": true,
+      "keyword_flags": [
+        "breathlessness"
+      ],
+      "llm_flags": [
+        "breathlessness"
+      ]
+    }
+  }
+]

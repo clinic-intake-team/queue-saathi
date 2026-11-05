@@ -1,0 +1,40 @@
+{
+  "model": "openai/gpt-oss-120b",
+  "files": {
+    "eval/run_setC.py": "fd8b65737f9083787dc104173fbb131b8294e7fd7493eced77162bb8a7d732b8",
+    "extract.py": "992540544a3be1e4edfcdb141351a0c09380cc7663af6b478b4f4808c1fd29cc",
+    "redflags.py": "cced76179d3a732c1c806ec88589ba8254a2630827603a3370d44c6996427850",
+    "llm.py": "14c058eebeeafeb965176bca8814943bbb63a48901e0390e4d18d2bbc91e60d0",
+    "gnani.py": "c895ea12a837ef11e46a7701cf0ca289da2820cbf84f14ed63cb1a5eb4163dc0",
+    "data/setC_ground_truth.csv": "e6336d53b2f0cf0e4459f222077024a13b02f3e41a286a301fda496d2953a67e",
+    "data/medicines.txt": "3fdfc1bfc26e2978dd8f29f17d12ad6d12ab2aa70ef3415eff844ab5fbfb7b46",
+    "prompts.yaml": "71598cf52f60a0910f906ed148dc6e465693526491058ab6667882b078d19b8a",
+    "examples/step1_protocol_sha256.json": "874e2a5bfe34737604a2754c1ca84b51bdadb87ec16740e3a5702a44211efcd7"
+  },
+  "audio": {
+    "recordings/ch_C01.m4a": "a1064c100bfc18740fdecc99933daf6f0858cd731dc8e51a479e9052b96fa9f4",
+    "recordings/ch_C02.m4a": "d6871dc203532081cd10e010f15c1f391ce4f828a5d35d782c1c6a6c2224f395",
+    "recordings/ch_C03.m4a": "ce3125b4e9067f14b90a3c718f858164ac8fc1f3cba70a8bbe67fe9cb172dab2",
+    "recordings/ch_C04.m4a": "e4009e14dc56d9b0f0df11b3b1e39b269a6f059e2ef25edd87a92e8f64b2acd7",
+    "recordings/ch_C05.m4a": "d3b42b128ce97ce20b7856edb2d3eb7c939a5e2d42f6737bbb918e9d71494c4b",
+    "recordings/ch_C06.m4a": "d84e27e3ea103b465519cb66c0d3a80a62ab60c468aa12e5a07f2ab758dc496e",
+    "recordings/ch_C07.m4a": "7aa0f6f5a11d39034bb217dad5d5c7b5014165e5150ff360a2fd244e469d73aa",
+    "recordings/ch_C08.m4a": "5677820fe0f2864d9b30a07c79ddb50dbf306e5fffe62c71535add1a21bbef93",
+    "recordings/ch_C09.m4a": "381d507a53a9492a9cd7b8195024500add3526692335fd1d014bc04bdd1c7d92",
+    "recordings/ch_C10.m4a": "932aa83284f67b739c888af7271a921f4480fd7f062bb0a495c7a88f56ce18e0",
+    "recordings/ch_C11.m4a": "7b0aa987967d56564e32ef1a7d3ef3da42392f8e227677a340ce3bea45e1c19a",
+    "recordings/ch_C12.m4a": "d78e5f842ff9b788cf10d77ee7c122c9532defb33c459c8f78da99d0b6279d21",
+    "recordings/tm_C01.m4a": "ab28c221bdf00b0ca552ce1a48f3aaeba327f00f0efe9b7fdf7bcf76e0e46733",
+    "recordings/tm_C02.m4a": "20eff56c65e5dfac54a3f28933e96a58c4f0e79f8565f6ebea31a740b309fa06",
+    "recordings/tm_C03.m4a": "dbc1794c31899814c3558077fb70db6795ee970c3fef6355bdde49274a707238",
+    "recordings/tm_C04.m4a": "acb18013236a0b5e3d41408a855fabc5761aaf03fcc08079d8268f8d553bf6c4",
+    "recordings/tm_C05.m4a": "53fef0ebe4caaf5db3c2ce28fd2ec76e40f33507708edd94a0b6f724dd6af161",
+    "recordings/tm_C06.m4a": "0a1643546f409589293cd2c3ee18eb871d5f935003d2ad87e6a2fd7804048f02",
+    "recordings/tm_C07.m4a": "4da4dce030e551c9e7de42f2408ed5a4940af9326059abb19cdc60b0744ea076",
+    "recordings/tm_C08.m4a": "0139a1124c968b8892ae554c57a23b6fd0c85a638effcc0d1052c7fe9a5ea2ff",
+    "recordings/tm_C09.m4a": "3c214f2b5ad78e17b07c17906085bd5d57700fd4e687c6d9a4df514651445437",
+    "recordings/tm_C10.m4a": "a1cbae49ce8b5aca33e28e6e256e3514cf49e5fb2ce7030624cf9ba358fef9c4",
+    "recordings/tm_C11.m4a": "26937d74e5f3010d2e4df48ff9b9bcac230dbce87e0469b43c408741c4f9f64c",
+    "recordings/tm_C12.m4a": "fc4a54cfc67750faa26335e63638c84d1685c8dfee77ee47f7dfd5a347e0782e"
+  }
+}
