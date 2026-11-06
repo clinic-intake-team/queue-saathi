@@ -1,0 +1,2 @@
+﻿session,recording_id,question_type,file,context,transcript,extracted_json,validation_errors,red_flag,red_flag_status,keyword_flags,llm_flags,error,processed_at
+S01,P1,P1,raw/setB_tm/S01/B_S01_P1.m4a,"Aapki umar kitni hai, aur aap purush hain ya mahila?",,,,,,,,RuntimeError: Set GNANI_API_KEY in .env for real calls.,2026-11-06T10:29:32.663093+00:00
