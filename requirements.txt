@@ -2,3 +2,4 @@ requests>=2.31,<3
 python-dotenv>=1,<2
 PyYAML>=6,<7
 streamlit>=1.40,<2
+rapidfuzz>=3,<4

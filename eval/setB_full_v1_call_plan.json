@@ -1,0 +1,43 @@
+{
+  "recordings": 212,
+  "prisma_calls": 212,
+  "prisma_cache_hits": 0,
+  "groq_known_calls": 0,
+  "groq_cache_hits": 0,
+  "groq_pending_transcripts": 212,
+  "groq_max_before_retries": 212,
+  "groq_time_estimate": {
+    "calls": 212,
+    "tokens_per_call": 2245,
+    "seconds": 4199,
+    "minutes": 70.0,
+    "limits": {
+      "requests_per_day": 1000,
+      "tokens_per_minute": 8000
+    },
+    "rpm_pacing_cap": 30,
+    "daily_limits_may_require_reset": null,
+    "unreported_limits": [
+      "requests_per_minute",
+      "tokens_per_day"
+    ],
+    "note": "Pacing time only; add response latency, Prisma time and any quota/reset waits."
+  },
+  "212_groq_time_estimate": {
+    "calls": 212,
+    "tokens_per_call": 2245,
+    "seconds": 4199,
+    "minutes": 70.0,
+    "limits": {
+      "requests_per_day": 1000,
+      "tokens_per_minute": 8000
+    },
+    "rpm_pacing_cap": 30,
+    "daily_limits_may_require_reset": null,
+    "unreported_limits": [
+      "requests_per_minute",
+      "tokens_per_day"
+    ],
+    "note": "Pacing time only; add response latency, Prisma time and any quota/reset waits."
+  }
+}

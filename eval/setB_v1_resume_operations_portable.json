@@ -1,0 +1,11 @@
+{
+  "parent_protocol_hash": "5148d7263d6db429abb5d868afb36900bbe0fc21b4559cd4eb4843eb36ab9b80",
+  "model": "openai/gpt-oss-120b",
+  "reasoning_effort": "medium",
+  "semantics_verified_against_original": true,
+  "operational_files": {
+    "llm.py": "9b2235411fd792408d46f1d745200512c8ae8f8c95045e465143ed3b07b53556",
+    "extract.py": "fac5d79c7e948c919703f5cb1c51a4040165a139983d5d97ebfa2ad6d45a9477",
+    "eval/resume_setB_v1.py": "cbc4e665e0f18fb4fc06d9684237232135a1707a70c41bb50766466af7cd4657"
+  }
+}

@@ -40,7 +40,7 @@ class ExtractionTests(unittest.TestCase):
 
     def test_valid_field_shapes(self):
         cases=[('P1',{'age':item(0),'sex':item('other')}),
-               ('P2',{'complaint':item({'summary':'Ear pain','symptoms':['ear pain']})}),
+               ('P2',{'complaint':item({'summary':'Ear pain','symptoms':['ear pain']}), 'red_flag_symptoms':item([])}),
                ('P3',{'duration_days':item(0.5)}),
                ('P4',{'red_flag_symptoms':item([])}),
                ('P5',{'medicines':item([{'name':None,'strength':None,'purpose':'BP'}])})]

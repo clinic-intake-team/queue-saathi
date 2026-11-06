@@ -1,0 +1,717 @@
+[
+  {
+    "clip": "ch_M01",
+    "condition": "keyterms_off",
+    "transcript": "हाँ, मैं Telmachiles लेता हूँ रोज़ सुबह 1।",
+    "medicines": []
+  },
+  {
+    "clip": "ch_M01",
+    "condition": "keyterms_on",
+    "transcript": "हाँ, मैं Telma H लेता हूँ रोज़ सुबह 1।",
+    "medicines": [
+      {
+        "name": "Telma H",
+        "strength": null,
+        "purpose": null,
+        "display": "Telma H",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M02",
+    "condition": "keyterms_off",
+    "transcript": "बुखार के लिए Dolo 650 ले रहा हूँ।",
+    "medicines": [
+      {
+        "name": "Dolo",
+        "strength": "650",
+        "purpose": null,
+        "display": "Dolo 650",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M02",
+    "condition": "keyterms_on",
+    "transcript": "बुखार के लिए Dolo 650 ले रहा हूँ।",
+    "medicines": [
+      {
+        "name": "Dolo",
+        "strength": "650",
+        "purpose": null,
+        "display": "Dolo 650",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M03",
+    "condition": "keyterms_off",
+    "transcript": "Glycomet 500 और Thyronorm 50 दोनों रोज़ लेता हूँ।",
+    "medicines": [
+      {
+        "name": "Glycomet",
+        "strength": "500",
+        "purpose": null,
+        "display": "Glycomet 500",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": "Thyronorm",
+        "strength": "50",
+        "purpose": null,
+        "display": "Thyronorm 50",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M03",
+    "condition": "keyterms_on",
+    "transcript": "Glycomet 500 और Thyronorm 50, दोनों रोज लेता हूँ।",
+    "medicines": [
+      {
+        "name": "Glycomet",
+        "strength": "500",
+        "purpose": null,
+        "display": "Glycomet 500",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": "Thyronorm",
+        "strength": "50",
+        "purpose": null,
+        "display": "Thyronorm 50",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M04",
+    "condition": "keyterms_off",
+    "transcript": "सुबह नाश्ते से पहले Pan 40 और रात को Ecospirin 75।",
+    "medicines": [
+      {
+        "name": "Pan",
+        "strength": "40",
+        "purpose": null,
+        "display": "Pan 40",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": "Ecosprin",
+        "strength": "75",
+        "purpose": null,
+        "display": "Ecosprin 75",
+        "match_score": 94.12,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M04",
+    "condition": "keyterms_on",
+    "transcript": "सुबह नाश्ते से पहले Pan 40 और रात को Ecosprin 75।",
+    "medicines": [
+      {
+        "name": "Pan",
+        "strength": "40",
+        "purpose": null,
+        "display": "Pan 40",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": "Ecosprin",
+        "strength": "75",
+        "purpose": null,
+        "display": "Ecosprin 75",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M05",
+    "condition": "keyterms_off",
+    "transcript": "Amlong 5 लेता हूँ, mostly BP के लिए।",
+    "medicines": [
+      {
+        "name": "Amlong",
+        "strength": "5",
+        "purpose": null,
+        "display": "Amlong 5",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M05",
+    "condition": "keyterms_on",
+    "transcript": "Amlong 5 लेता हूँ, mostly BP के लिए।",
+    "medicines": [
+      {
+        "name": "Amlong",
+        "strength": "5",
+        "purpose": null,
+        "display": "Amlong 5",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M06",
+    "condition": "keyterms_off",
+    "transcript": "Metformin or atorvastatin generic वाली?",
+    "medicines": [
+      {
+        "name": "Metformin",
+        "strength": null,
+        "purpose": null,
+        "display": "Metformin",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": "Atorvastatin",
+        "strength": null,
+        "purpose": null,
+        "display": "Atorvastatin",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M06",
+    "condition": "keyterms_on",
+    "transcript": "Metformin or atorvastatin generic value?",
+    "medicines": [
+      {
+        "name": "Metformin",
+        "strength": null,
+        "purpose": null,
+        "display": "Metformin",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": "Atorvastatin",
+        "strength": null,
+        "purpose": null,
+        "display": "Atorvastatin",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M07",
+    "condition": "keyterms_off",
+    "transcript": "Montel LC की गोली और Asthalin का pump।",
+    "medicines": [
+      {
+        "name": "Asthalin",
+        "strength": null,
+        "purpose": null,
+        "display": "Asthalin",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M07",
+    "condition": "keyterms_on",
+    "transcript": "Montair LC की गोली और Asthalin का pump।",
+    "medicines": [
+      {
+        "name": "Montair LC",
+        "strength": null,
+        "purpose": null,
+        "display": "Montair LC",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": "Asthalin",
+        "strength": null,
+        "purpose": null,
+        "display": "Asthalin",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M08",
+    "condition": "keyterms_off",
+    "transcript": "शलकाल और apprise D3, calcium और vitamin D के लिए।",
+    "medicines": []
+  },
+  {
+    "clip": "ch_M08",
+    "condition": "keyterms_on",
+    "transcript": "Shelcal और Uprise D3, calcium और vitamin D के लिए।",
+    "medicines": [
+      {
+        "name": "Shelcal",
+        "strength": null,
+        "purpose": null,
+        "display": "Shelcal",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": "Uprise D3",
+        "strength": null,
+        "purpose": null,
+        "display": "Uprise D3",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M09",
+    "condition": "keyterms_off",
+    "transcript": "Instead of thyronorm 25.",
+    "medicines": [
+      {
+        "name": "Thyronorm",
+        "strength": "25",
+        "purpose": null,
+        "display": "Thyronorm 25",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M09",
+    "condition": "keyterms_on",
+    "transcript": "Instead of Thyronorm purchase.",
+    "medicines": [
+      {
+        "name": "Thyronorm",
+        "strength": null,
+        "purpose": null,
+        "display": "Thyronorm",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M10",
+    "condition": "keyterms_off",
+    "transcript": "जानू Met और EcoSprint चल रहा है अभी।",
+    "medicines": [
+      {
+        "name": "Ecosprin",
+        "strength": null,
+        "purpose": null,
+        "display": "Ecosprin",
+        "match_score": 94.12,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M10",
+    "condition": "keyterms_on",
+    "transcript": "Janumet और Ecosprin चल रहा है अभी।",
+    "medicines": [
+      {
+        "name": "Janumet",
+        "strength": null,
+        "purpose": null,
+        "display": "Janumet",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": "Ecosprin",
+        "strength": null,
+        "purpose": null,
+        "display": "Ecosprin",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M11",
+    "condition": "keyterms_off",
+    "transcript": "BP के लिए एक गोली है, but नाम याद नहीं आ रहा, और Pantocid भी।",
+    "medicines": [
+      {
+        "name": "Pantocid",
+        "strength": null,
+        "purpose": null,
+        "display": "Pantocid",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": null,
+        "strength": null,
+        "purpose": "BP",
+        "display": "BP medicine (name unknown)",
+        "match_score": null,
+        "status": "unknown_name_with_purpose"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M11",
+    "condition": "keyterms_on",
+    "transcript": "BP के लिए एक गोली है, but नाम याद नहीं आ रहा, और Pantocid भी।",
+    "medicines": [
+      {
+        "name": "Pantocid",
+        "strength": null,
+        "purpose": null,
+        "display": "Pantocid",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": null,
+        "strength": null,
+        "purpose": "BP",
+        "display": "BP medicine (name unknown)",
+        "match_score": null,
+        "status": "unknown_name_with_purpose"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M12",
+    "condition": "keyterms_off",
+    "transcript": "कभी कभी दर्द हो तो Comiflam ले लेता हूँ।",
+    "medicines": [
+      {
+        "name": "Combiflam",
+        "strength": null,
+        "purpose": null,
+        "display": "Combiflam",
+        "match_score": 94.12,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M12",
+    "condition": "keyterms_on",
+    "transcript": "कभी-कभी दर्द हो तो Combiflam ले लेता हूँ।",
+    "medicines": [
+      {
+        "name": "Combiflam",
+        "strength": null,
+        "purpose": null,
+        "display": "Combiflam",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M13",
+    "condition": "keyterms_off",
+    "transcript": "अभी 3 दिन से Azithral 500 चल रहा है।",
+    "medicines": [
+      {
+        "name": "Azithral",
+        "strength": "500",
+        "purpose": null,
+        "display": "Azithral 500",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M13",
+    "condition": "keyterms_on",
+    "transcript": "अभी 3 दिन से Azithral 500 चल रहा है।",
+    "medicines": [
+      {
+        "name": "Azithral",
+        "strength": "500",
+        "purpose": null,
+        "display": "Azithral 500",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M14",
+    "condition": "keyterms_off",
+    "transcript": "सर्दी के लिए Crocin और Citrizin ले रहा हूँ।",
+    "medicines": [
+      {
+        "name": "Crocin",
+        "strength": null,
+        "purpose": null,
+        "display": "Crocin",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M14",
+    "condition": "keyterms_on",
+    "transcript": "सर्दी के लिए Crocin और Cetzine ले रहा हूँ।",
+    "medicines": [
+      {
+        "name": "Crocin",
+        "strength": null,
+        "purpose": null,
+        "display": "Crocin",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": "Cetzine",
+        "strength": null,
+        "purpose": null,
+        "display": "Cetzine",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M15",
+    "condition": "keyterms_off",
+    "transcript": "ये Rosuvus 10 और Clopileate 75।",
+    "medicines": [
+      {
+        "name": "Rosuvas",
+        "strength": "10",
+        "purpose": null,
+        "display": "Rosuvas 10",
+        "match_score": 85.71,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": "Clopilet",
+        "strength": "75",
+        "purpose": null,
+        "display": "Clopilet 75",
+        "match_score": 88.89,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M15",
+    "condition": "keyterms_on",
+    "transcript": "ये Rosuvas 10 और Clopilet 75।",
+    "medicines": [
+      {
+        "name": "Rosuvas",
+        "strength": "10",
+        "purpose": null,
+        "display": "Rosuvas 10",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": "Clopilet",
+        "strength": "75",
+        "purpose": null,
+        "display": "Clopilet 75",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M16",
+    "condition": "keyterms_off",
+    "transcript": "शुगर की 2 गोलियाँ हैं, एक Glycomet है, दूसरी का नाम याद नहीं आ रहा।",
+    "medicines": [
+      {
+        "name": "Glycomet",
+        "strength": null,
+        "purpose": null,
+        "display": "Glycomet",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": null,
+        "strength": null,
+        "purpose": "sugar",
+        "display": "sugar medicine (name unknown)",
+        "match_score": null,
+        "status": "unknown_name_with_purpose"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M16",
+    "condition": "keyterms_on",
+    "transcript": "शुगर की 2 गोलियाँ हैं। एक Glycomet है, दूसरी का नाम याद नहीं आ रहा।",
+    "medicines": [
+      {
+        "name": "Glycomet",
+        "strength": null,
+        "purpose": null,
+        "display": "Glycomet",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": null,
+        "strength": null,
+        "purpose": "sugar",
+        "display": "sugar medicine (name unknown)",
+        "match_score": null,
+        "status": "unknown_name_with_purpose"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M17",
+    "condition": "keyterms_off",
+    "transcript": "Borecoat का inhaler और dairy film।",
+    "medicines": []
+  },
+  {
+    "clip": "ch_M17",
+    "condition": "keyterms_on",
+    "transcript": "Borecot का inhaler और Deriphyllin।",
+    "medicines": [
+      {
+        "name": "Deriphyllin",
+        "strength": null,
+        "purpose": null,
+        "display": "Deriphyllin",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M18",
+    "condition": "keyterms_off",
+    "transcript": "Lantus insulin का injection लगाता हूँ और Glycomet।",
+    "medicines": [
+      {
+        "name": "Lantus",
+        "strength": null,
+        "purpose": null,
+        "display": "Lantus",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": "Insulin",
+        "strength": null,
+        "purpose": null,
+        "display": "Insulin",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": "Glycomet",
+        "strength": null,
+        "purpose": null,
+        "display": "Glycomet",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M18",
+    "condition": "keyterms_on",
+    "transcript": "Lantus insulin का injection लगाता हूँ और Glycomet।",
+    "medicines": [
+      {
+        "name": "Lantus",
+        "strength": null,
+        "purpose": null,
+        "display": "Lantus",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": "Insulin",
+        "strength": null,
+        "purpose": null,
+        "display": "Insulin",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      },
+      {
+        "name": "Glycomet",
+        "strength": null,
+        "purpose": null,
+        "display": "Glycomet",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M19",
+    "condition": "keyterms_off",
+    "transcript": "नहीं नहीं, अभी कोई दवाई नहीं ले रहा।",
+    "medicines": []
+  },
+  {
+    "clip": "ch_M19",
+    "condition": "keyterms_on",
+    "transcript": "नहीं नहीं, अभी कोई दवाई नहीं ले रहा।",
+    "medicines": []
+  },
+  {
+    "clip": "ch_M20",
+    "condition": "keyterms_off",
+    "transcript": "हाँ, Telma लेता हूँ। नहीं नहीं, Telma नहीं, Amlong है वो।",
+    "medicines": [
+      {
+        "name": "Amlong",
+        "strength": null,
+        "purpose": null,
+        "display": "Amlong",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  },
+  {
+    "clip": "ch_M20",
+    "condition": "keyterms_on",
+    "transcript": "हाँ, Telma लेता हूँ। नहीं नहीं, Telma नहीं, Amlong है वो।",
+    "medicines": [
+      {
+        "name": "Amlong",
+        "strength": null,
+        "purpose": null,
+        "display": "Amlong",
+        "match_score": 100.0,
+        "status": "needs_confirmation"
+      }
+    ]
+  }
+]

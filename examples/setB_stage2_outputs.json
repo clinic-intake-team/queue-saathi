@@ -1,0 +1,189 @@
+[
+  {
+    "question": "P0",
+    "question_key": null,
+    "transcript": "Mera token satrah hai.",
+    "extracted": {
+      "token": {
+        "value": 17,
+        "status": "ok",
+        "evidence": "satrah"
+      }
+    },
+    "red_flags": {
+      "alert": false,
+      "status": "clear",
+      "keyword_flags": [],
+      "llm_flags": []
+    },
+    "provider": "simulated_offline_fixture"
+  },
+  {
+    "question": "F",
+    "question_key": "measured",
+    "transcript": "Haan, thermometer se naapa tha.",
+    "extracted": {
+      "follow_up": {
+        "value": {
+          "question_key": "measured",
+          "value": true
+        },
+        "status": "ok",
+        "evidence": "Haan, thermometer se naapa tha."
+      },
+      "red_flag_symptoms": {
+        "value": [],
+        "status": "ok",
+        "evidence": "Haan, thermometer se naapa tha."
+      }
+    },
+    "red_flags": {
+      "alert": false,
+      "status": "clear",
+      "keyword_flags": [],
+      "llm_flags": []
+    },
+    "provider": "simulated_offline_fixture"
+  },
+  {
+    "question": "F",
+    "question_key": "pain_score",
+    "transcript": "Dard aath hai aur saans nahi aa rahi.",
+    "extracted": {
+      "follow_up": {
+        "value": {
+          "question_key": "pain_score",
+          "value": 8
+        },
+        "status": "ok",
+        "evidence": "Dard aath hai"
+      },
+      "red_flag_symptoms": {
+        "value": [
+          "breathlessness"
+        ],
+        "status": "ok",
+        "evidence": "saans nahi aa rahi"
+      }
+    },
+    "red_flags": {
+      "alert": true,
+      "status": "alert",
+      "keyword_flags": [
+        "breathlessness"
+      ],
+      "llm_flags": [
+        "breathlessness"
+      ]
+    },
+    "provider": "simulated_offline_fixture"
+  },
+  {
+    "question": "R1",
+    "question_key": null,
+    "transcript": "Haan, aapne dawai sahi boli.",
+    "extracted": {
+      "confirmed": {
+        "value": true,
+        "status": "ok",
+        "evidence": "Haan, aapne dawai sahi boli."
+      },
+      "correction": {
+        "value": null,
+        "status": "unclear",
+        "evidence": ""
+      }
+    },
+    "red_flags": {
+      "alert": false,
+      "status": "clear",
+      "keyword_flags": [],
+      "llm_flags": []
+    },
+    "provider": "simulated_offline_fixture"
+  },
+  {
+    "question": "R1",
+    "question_key": null,
+    "transcript": "Nahi, dose bees milligram hai.",
+    "extracted": {
+      "confirmed": {
+        "value": false,
+        "status": "ok",
+        "evidence": "Nahi"
+      },
+      "correction": {
+        "value": "dose bees milligram hai",
+        "status": "ok",
+        "evidence": "dose bees milligram hai"
+      }
+    },
+    "red_flags": {
+      "alert": false,
+      "status": "clear",
+      "keyword_flags": [],
+      "llm_flags": []
+    },
+    "provider": "simulated_offline_fixture"
+  },
+  {
+    "question": "P6",
+    "question_key": null,
+    "transcript": "Mujhe kisi dawai se allergy nahi hai.",
+    "extracted": {
+      "allergies": {
+        "value": "none",
+        "status": "ok",
+        "evidence": "kisi dawai se allergy nahi hai"
+      }
+    },
+    "red_flags": {
+      "alert": false,
+      "status": "clear",
+      "keyword_flags": [],
+      "llm_flags": []
+    },
+    "provider": "simulated_offline_fixture"
+  },
+  {
+    "question": "P6",
+    "question_key": null,
+    "transcript": "Mujhe nahi pata kis dawai se allergy hai.",
+    "extracted": {
+      "allergies": {
+        "value": "unknown",
+        "status": "ok",
+        "evidence": "Mujhe nahi pata kis dawai se allergy hai."
+      }
+    },
+    "red_flags": {
+      "alert": false,
+      "status": "clear",
+      "keyword_flags": [],
+      "llm_flags": []
+    },
+    "provider": "simulated_offline_fixture"
+  },
+  {
+    "question": "P7",
+    "question_key": null,
+    "transcript": "Mujhe sugar aur asthma hai.",
+    "extracted": {
+      "conditions": {
+        "value": [
+          "diabetes",
+          "asthma"
+        ],
+        "status": "ok",
+        "evidence": "sugar aur asthma"
+      }
+    },
+    "red_flags": {
+      "alert": false,
+      "status": "clear",
+      "keyword_flags": [],
+      "llm_flags": []
+    },
+    "provider": "simulated_offline_fixture"
+  }
+]

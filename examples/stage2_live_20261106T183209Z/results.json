@@ -1,0 +1,212 @@
+[
+  {
+    "index": 6,
+    "question": "P6",
+    "question_key": null,
+    "transcript": "Mujhe kisi dawai se allergy nahi hai.",
+    "model": "openai/gpt-oss-120b",
+    "extracted": {
+      "allergies": {
+        "value": "none",
+        "status": "ok",
+        "evidence": "Mujhe kisi dawai se allergy nahi hai."
+      }
+    },
+    "red_flags": {
+      "alert": false,
+      "status": "clear",
+      "keyword_flags": [],
+      "llm_flags": []
+    },
+    "invalid_llm_output": false,
+    "validation_errors": [],
+    "expected": {
+      "allergies": {
+        "value": "none",
+        "status": "ok",
+        "evidence": "kisi dawai se allergy nahi hai"
+      }
+    },
+    "failures": [],
+    "passed": true,
+    "raw_response": {
+      "id": "chatcmpl-ecc3e1c1-ca00-4962-bd6f-68e265f59f15",
+      "object": "chat.completion",
+      "created": 1793989930,
+      "model": "openai/gpt-oss-120b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\"allergies\":{\"value\":[\"none\"],\"status\":\"ok\",\"evidence\":\"Mujhe kisi dawai se allergy nahi hai.\"}}",
+            "reasoning": "We need to produce JSON with fields as per request. The user asks for P6 allergies. The transcript: \"Mujhe kisi dawai se allergy nahi hai.\" Means \"I have no allergy to any medicine.\" So allergies field: list with \"none\"? According to spec: allergies is a nonempty list of medicine/substance names, \"none\" for a denial, or \"unknown\" if patient does not know. Denial is ok, not declined. So we return allergies: {\"value\": [\"none\"], \"status\":\"ok\",\"evidence\":\"Mujhe kisi dawai se allergy nahi hai.\"}\n\nAlso need token field P0? The request only asks for P6 field. The response should include only requested fields? The spec says return only a JSON object with exactly the requested fields. So only allergies field. No token. So output: {\"allergies\": {\"value\": [\"none\"], \"status\":\"ok\",\"evidence\":\"Mujhe kisi dawai se allergy nahi hai.\"}} Ensure compact."
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "queue_time": 0.156900477,
+        "prompt_tokens": 1139,
+        "prompt_time": 0.04548608,
+        "completion_tokens": 247,
+        "completion_time": 0.514741253,
+        "total_tokens": 1386,
+        "total_time": 0.560227333,
+        "completion_tokens_details": {
+          "reasoning_tokens": 209
+        }
+      },
+      "usage_breakdown": null,
+      "system_fingerprint": "fp_c3da0d4bb9",
+      "x_groq": {
+        "id": "req_01m6s23ty9e5kas1nknns8k0sz",
+        "seed": 1502330450
+      },
+      "service_tier": "on_demand"
+    }
+  },
+  {
+    "index": 7,
+    "question": "P6",
+    "question_key": null,
+    "transcript": "Mujhe nahi pata kis dawai se allergy hai.",
+    "model": "openai/gpt-oss-120b",
+    "extracted": {
+      "allergies": {
+        "value": "unknown",
+        "status": "ok",
+        "evidence": "Mujhe nahi pata kis dawai se allergy hai."
+      }
+    },
+    "red_flags": {
+      "alert": false,
+      "status": "clear",
+      "keyword_flags": [],
+      "llm_flags": []
+    },
+    "invalid_llm_output": false,
+    "validation_errors": [],
+    "expected": {
+      "allergies": {
+        "value": "unknown",
+        "status": "ok",
+        "evidence": "Mujhe nahi pata kis dawai se allergy hai."
+      }
+    },
+    "failures": [],
+    "passed": true,
+    "raw_response": {
+      "id": "chatcmpl-bf0dd30d-139f-4ce4-ad1f-e918b27ff22c",
+      "object": "chat.completion",
+      "created": 1793989950,
+      "model": "openai/gpt-oss-120b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\"allergies\":{\"value\":\"unknown\",\"status\":\"ok\",\"evidence\":\"Mujhe nahi pata kis dawai se allergy hai.\"}}",
+            "reasoning": "We need to produce JSON with fields: token? The request is P6 field: allergies. We need to output a JSON object with exactly the requested fields. The overall schema: we need to return a JSON object with fields: token?, P6? Actually per instructions, we must return only a JSON object with exactly the requested fields. The request includes \"question\": \"P6\", \"fields\": [\"allergies\"], \"question_key\": null, \"transcript\": \"...\". So we need to output a JSON object with the field \"allergies\" having structure {\"value\": ..., \"status\": ..., \"evidence\": ...}. Also token? The spec mentions P0 field token is an integer >=0, not an age or telephone number. But not required unless asked. Since only field requested is allergies, we only include that field. No token needed.\n\nNow interpret transcript: \"Mujhe nahi pata kis dawai se allergy hai.\" Means \"I don't know which medicine I am allergic to.\" So the patient says they don't know. This is not a refusal, it's unknown. According to P6 field: allergies is a nonempty list of medicine/substance names, \"none\" for a denial, or \"unknown\" if the patient does not know. Here they say they don't know which medicine, so status should be ok? The value should be \"unknown\". The status: Since they provided answer (unknown), it's ok. Evidence: exact substring \"Mujhe nahi pata kis dawai se allergy hai.\" Provide that.\n\nThus output:\n\n{\n \"allergies\": {\"value\":\"unknown\",\"status\":\"ok\",\"evidence\":\"Mujhe nahi pata kis dawai se allergy hai.\"}\n}\n\nMake sure JSON compact."
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "queue_time": 0.158229481,
+        "prompt_tokens": 1140,
+        "prompt_time": 0.048122895,
+        "completion_tokens": 392,
+        "completion_time": 0.828012302,
+        "total_tokens": 1532,
+        "total_time": 0.876135197,
+        "completion_tokens_details": {
+          "reasoning_tokens": 354
+        }
+      },
+      "usage_breakdown": null,
+      "system_fingerprint": "fp_27194a498a",
+      "x_groq": {
+        "id": "req_01m6s24e09en1t0hnv83g6wtbz",
+        "seed": 1951641044
+      },
+      "service_tier": "on_demand"
+    }
+  },
+  {
+    "index": 8,
+    "question": "P7",
+    "question_key": null,
+    "transcript": "Mujhe sugar aur asthma hai.",
+    "model": "openai/gpt-oss-120b",
+    "extracted": {
+      "conditions": {
+        "value": [
+          "diabetes",
+          "asthma"
+        ],
+        "status": "ok",
+        "evidence": "Mujhe sugar aur asthma hai."
+      }
+    },
+    "red_flags": {
+      "alert": false,
+      "status": "clear",
+      "keyword_flags": [],
+      "llm_flags": []
+    },
+    "invalid_llm_output": false,
+    "validation_errors": [],
+    "expected": {
+      "conditions": {
+        "value": [
+          "diabetes",
+          "asthma"
+        ],
+        "status": "ok",
+        "evidence": "sugar aur asthma"
+      }
+    },
+    "failures": [],
+    "passed": true,
+    "raw_response": {
+      "id": "chatcmpl-5dc14493-4472-4cb9-aaec-5c038d070a0e",
+      "object": "chat.completion",
+      "created": 1793989970,
+      "model": "openai/gpt-oss-120b",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "{\"conditions\":{\"value\":[\"diabetes\",\"asthma\"],\"status\":\"ok\",\"evidence\":\"Mujhe sugar aur asthma hai.\"}}",
+            "reasoning": "We need to produce JSON with fields as per request. The user asks for P7 fields: conditions. The transcript: \"Mujhe sugar aur asthma hai.\"\n\nWe need to parse conditions: sugar => diabetes, asthma => asthma. So list should include \"diabetes\" and \"asthma\". According to spec, list of canonical labels: \"diabetes\", \"BP\", \"thyroid\", \"asthma\", \"other\", or \"none\". So we output [\"diabetes\",\"asthma\"].\n\nStatus: Since we have explicit info, status ok. Provide evidence: exact substring from transcript. Could be \"sugar aur asthma\". Provide that as evidence.\n\nReturn JSON with field \"conditions\": {\"value\": [\"diabetes\",\"asthma\"], \"status\":\"ok\",\"evidence\":\"Mujhe sugar aur asthma hai.\"}\n\nAlso need token? No, only P7 fields requested. So output JSON with that field.\n\nMake sure compact."
+          },
+          "logprobs": null,
+          "finish_reason": "stop"
+        }
+      ],
+      "usage": {
+        "queue_time": 0.318563169,
+        "prompt_tokens": 1134,
+        "prompt_time": 0.051271904,
+        "completion_tokens": 234,
+        "completion_time": 0.492953225,
+        "total_tokens": 1368,
+        "total_time": 0.544225129,
+        "completion_tokens_details": {
+          "reasoning_tokens": 196
+        }
+      },
+      "usage_breakdown": null,
+      "system_fingerprint": "fp_4200b3f836",
+      "x_groq": {
+        "id": "req_01m6s2519me1q98gspba4vjzq7",
+        "seed": 2089462361
+      },
+      "service_tier": "on_demand"
+    }
+  }
+]

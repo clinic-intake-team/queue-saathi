@@ -1,0 +1,26 @@
+{
+  "status": "complete",
+  "model": "openai/gpt-oss-120b",
+  "reasoning_effort": "medium",
+  "clips": 212,
+  "sessions": 20,
+  "http_attempts_official_run": {
+    "groq": 171,
+    "prisma": 212
+  },
+  "last_resume_http_attempts": {
+    "groq": 102,
+    "prisma": 0
+  },
+  "last_resume_cache_checkpoint_skips": {
+    "groq_or_checkpoint": 110,
+    "prisma": 212
+  },
+  "logical_llm_cache_hits_entire_official_run": 41,
+  "active_elapsed_seconds": 3535.3,
+  "scoring_changed_after_results": false,
+  "failure_causes": "provisional transcript-based automatic labels; no audio replay",
+  "executed_operations_protocol": "eval/setB_v1_resume_operations_response429.json",
+  "executed_operations_protocol_sha256": "2eb3e608a5d4e3caeb0264a4776019fa7cc66c7bab738302f235f2b6b8668274",
+  "reference_portability_note": "After scoring, reference-only paths were pinned/committed for future verification; extraction/scoring semantics and saved scores are unchanged."
+}

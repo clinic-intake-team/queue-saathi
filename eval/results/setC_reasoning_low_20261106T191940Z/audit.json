@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "prisma_calls": 0,
+  "groq_attempts": 28,
+  "successful_groq_calls": 28,
+  "total_tokens": 25367,
+  "average_tokens": 905.9642857142857,
+  "projected_tokens_212": 192064.42857142858
+}
