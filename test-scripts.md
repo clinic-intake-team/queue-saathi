@@ -7,11 +7,11 @@
 | Set | What it tests | Per speaker | 2 speakers |
 |---|---|---|---|
 | A: Medicines | Medicine names, keyterms on vs off | 20 clips | 40 clips |
-| B: Full sessions | End-to-end intake accuracy, red flags | 10 sessions (~9 answers each, ~90 clips) | 20 sessions (~180 clips) |
+| B: Full sessions | Question-level transcription/extraction and red flags | 10 sessions (9–12 recordings each; current `tm` batch: 106) | 20 sessions (about 212 at current batch size) |
 | C: Edge cases | Unclear, declined, negation, noise, etc. | 12 clips | 24 clips |
-| **Total** | | ~122 clips | **~244 clips** |
+| **Total** | | ~138 clips (106 Set B files in current tm batch) | **~276 clips at current Set B batch size** |
 
-Evaluation conditions: every clip runs **clean** and **phone + noise**; Set A clips also run **keyterms off vs on**. Estimated cost: about ₹40–60.
+Planned comparison conditions: clean and phone + noise; Set A also compares keyterms off vs on. The current Set B evaluator runs the original clean recordings only; it does not create phone/noise variants or exercise the live multi-turn app flow. See [Set B run guide](eval/setB_README.md). Estimated cost: about ₹40–60.
 
 ## Recording rules (important)
 1. **Don't read the card word for word.** Glance at the facts, look away, and say it the way a patient would. Hesitations, "umm", and Hindi-English mixing are good. This is what makes the test honest.
@@ -19,7 +19,7 @@ Evaluation conditions: every clip runs **clean** and **phone + noise**; Set A cl
 3. **Use a phone mic**, at normal distance, in a normal room. For Set C item C10, turn a TV or fan on loud.
 4. **Say numbers the natural way.** Mix it up: sometimes Hindi ("chaalis"), sometimes English ("forty").
 5. **Your sex is your own.** Answer P1 with your actual sex; the age comes from the card.
-6. **File names:** `{speaker}_{card}_{question}.wav`, e.g. `ch_S03_P4.wav`, `tm_M07.wav`, `ch_C05.wav`.
+6. **File names:** for Sets A/C, `{speaker}_{card}.wav`; for Set B, `B_{session}_{question}.m4a`, e.g. `B_S03_P4.m4a`, `B_S03_F01.m4a`, `B_S03_R1.m4a`. Set B session IDs are `S01`–`S10`; follow-ups are numbered `F01`, `F02`, etc. The `eval/setB_recording_name_map.csv` manifest preserves the original follow-up labels. Current Set B evaluator input is the teammate's `raw/setB_tm/` folder; see [Set B run guide](eval/setB_README.md).
 7. **Storage:** keep recordings **out of the public repo** (voice is personal data). Share them through a private Google Drive folder. `recordings/` is already in `.gitignore`.
 
 Easiest approach: ask Codex for a **recording mode** in the app that shows the card, plays the question, records your answer and saves it with the right file name automatically (prompt at the end).
@@ -54,7 +54,7 @@ Question being answered: P5, "Kya aap abhi koi dawai le rahe hain? Naam bataiye.
 
 ---
 
-## Set B: Full patient sessions (10 cards)
+## Set B: Full patient sessions (10 sessions, S01–S10)
 Answer every question the app asks, using the card's facts in your own words. If the app asks a follow-up that isn't covered, answer naturally and consistently with the card, and note what you said.
 
 **S01: Fever**
@@ -158,4 +158,4 @@ Target: **0 missed red flags.** Report false alarms honestly.
 ---
 
 ## Codex prompt: recording mode
-> Add a "Recording mode" tab to the Streamlit app. It loads test cards from `data/test_cards.yaml` (Sets A, B and C from claude/test-scripts.md; convert them to YAML with ground truth). The user selects a speaker code (ch / tm / other) and a card. For Set B, it steps through the questions in order, plays the cached prompt audio, shows the card facts, records each answer with `st.audio_input`, and saves it as `recordings/{speaker}_{card}_{question}.wav` (16 kHz mono WAV). For Sets A and C, it records one clip per card with names `{speaker}_{card}.wav`. Show a checklist of which clips are done per speaker. Never call the Gnani API in this tab.
+> Add a "Recording mode" tab to the Streamlit app. It loads test cards from `data/test_cards.yaml` (Sets A, B and C from `test-scripts.md`; convert them to YAML with ground truth). The user selects a speaker code (ch / tm / other) and a card. For Set B, it steps through the questions in order, plays the cached prompt audio, shows the card facts, records each answer, and saves one clip per question as `B_{session}_{question}.m4a` under `recordings/`. Use P0–P7, F01/F02/etc. for follow-ups, and R1 for the medicine read-back. For Sets A and C, it records one clip per card with names `{speaker}_{card}.wav`. Show a checklist of which clips are done per speaker. Never call the Gnani API in this tab.

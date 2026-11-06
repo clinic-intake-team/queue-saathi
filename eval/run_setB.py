@@ -25,6 +25,7 @@ AUDIO_EXTENSIONS = {".m4a", ".wav", ".mp3"}
 EXPECTED_TOTAL = 106
 EXPECTED_STANDARD = 80
 EXPECTED_FOLLOWUPS = 26
+FOLLOWUP_SOURCE_IDS = {}
 
 FOLLOWUP_PROMPTS = {
     "F(chills)": "Thand lag ke aata hai?",
@@ -55,6 +56,10 @@ def prompt_for(label, prompts):
         return FOLLOWUP_PROMPTS[label]
     raise ValueError(f"No STT question context defined for {label}")
 
+def source_followup_label(session, label):
+    """Restore the original semantic label for context using the rename map."""
+    return FOLLOWUP_SOURCE_IDS.get((session, label), label)
+
 def duration_seconds(path):
     try:
         from mutagen import File as MutagenFile
@@ -66,6 +71,7 @@ def duration_seconds(path):
     return gnani._file_seconds(path, path.read_bytes())
 
 def load_inputs():
+    global FOLLOWUP_SOURCE_IDS
     source = ROOT / "raw" / "setB_tm"
     if not source.is_dir():
         raise SystemExit(f"Set B audio folder not found: {source}")
@@ -91,6 +97,27 @@ def load_inputs():
             raise SystemExit(f"Duration unavailable or not between 0 and 30 seconds: {path}")
     if (standard, followups) != (EXPECTED_STANDARD, EXPECTED_FOLLOWUPS):
         raise SystemExit(f"Expected 80 standard + 26 follow-ups; found {standard} + {followups}.")
+    mapping_path = ROOT / "eval" / "setB_recording_name_map.csv"
+    if not mapping_path.is_file():
+        raise SystemExit(f"Set B follow-up name map not found: {mapping_path}")
+    with mapping_path.open(newline="", encoding="utf-8-sig") as stream:
+        mapping = list(csv.DictReader(stream))
+    FOLLOWUP_SOURCE_IDS = {
+        (row["session"], row["recording_id"]): row["original_recording_id"]
+        for row in mapping
+        if row["speaker"] == "tm" and row["original_recording_id"].startswith("F(")
+    }
+    tm_followups = {
+        (session, label)
+        for path in paths
+        for session, label, question in (classify(path),)
+        if question == "FOLLOWUP" and re.fullmatch(r"F\d{2}", label)
+    }
+    if tm_followups != set(FOLLOWUP_SOURCE_IDS):
+        raise SystemExit("Set B tm follow-up filenames and eval/setB_recording_name_map.csv do not match.")
+    unknown_followups = sorted(set(FOLLOWUP_SOURCE_IDS.values()) - set(FOLLOWUP_PROMPTS))
+    if unknown_followups:
+        raise SystemExit(f"No prompt context defined for mapped Set B follow-ups: {unknown_followups}")
     prompts = yaml.safe_load((ROOT / "prompts.yaml").read_text(encoding="utf-8"))
     for q in ("P0", "P1", "P2", "P3", "P4", "P5", "P6", "P7"):
         if not isinstance(prompts.get(q), str) or not prompts[q].strip():
@@ -114,8 +141,8 @@ def build_plan(paths, prompts, medicines, symptoms):
     prisma_calls = prisma_hits = groq_known = groq_hits = groq_pending = 0
     extraction_count = 0
     for path in paths:
-        _, label, question = classify(path)
-        context = prompt_for(label, prompts)
+        session, label, question = classify(path)
+        context = prompt_for(source_followup_label(session, label), prompts)
         terms = request_terms(question, medicines, symptoms)
         cache = gnani.stt_cache_path(path, terms, context=context, mock=False)
         if cache.exists():
@@ -180,7 +207,7 @@ def run(paths, prompts, medicines, symptoms):
     try:
         for index, path in enumerate(paths, 1):
             session, label, question = classify(path)
-            context = prompt_for(label, prompts)
+            context = prompt_for(source_followup_label(session, label), prompts)
             terms = request_terms(question, medicines, symptoms)
             row = dict(session=session, recording_id=label, question_type=question,
                        file=path.relative_to(ROOT).as_posix(), context=context,
