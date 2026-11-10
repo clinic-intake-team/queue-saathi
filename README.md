@@ -1,5 +1,7 @@
 # Clinic Queue Intake
 
+**Hackathon submission:** [Read the one-page QueueSaathi solution pitch](SOLUTION_PITCH.md).
+
 Phase 1 skeleton in the existing project root. Python, Streamlit, Prisma v3.0 STT and Timbre v3.0 TTS. Intake logic and extraction are later phases.
 
 Evaluation guides: [Set A](eval/README.md), [Set B](eval/setB_README.md), [Set C](eval/setC_README.md).
