@@ -12,3 +12,34 @@ raw/**
 !raw/setB_tm/**/*.m4a
 assets/prompts/*.wav
 assets/prompts/*.mock
+
+# Local UI patient data and uploads (never push)
+data/ui_sessions/
+web/node_modules/
+web/dist/
+web/*.tsbuildinfo
+assets/prompts/live_manifest.json
+assets/prompts/live_manifest.tmp
+assets/prompts/hi/
+assets/prompts/en/
+data/sessions_archive/
+
+# Standalone demo video: dependencies, private captures and rendered media
+video/node_modules/
+video/out/
+video/public/captures/
+video/public/media/
+video/**/*.mp4
+video/**/*.mov
+video/**/*.webm
+video/**/*.m4a
+video/**/*.mp3
+video/**/*.wav
+video/**/*.aac
+video/**/*.ogg
+
+# Public-repository hygiene
+.DS_Store
+.env.*
+!.env.example
+data/sessions/
