@@ -5,7 +5,7 @@
 
 Voice-first clinic intake in **Hinglish · हिंदी · English**
 
-**[One-page solution pitch](SOLUTION_PITCH.md)** · **[Setup guide](SETUP.md)** · **[How it works](#how-it-works)** · **[Results](#what-we-measured)** · **[Run locally](#run-locally)**
+**[One-page solution pitch](docs/SOLUTION_PITCH.md)** · **[Setup guide](SETUP.md)** · **[How it works](#how-it-works)** · **[Results](#what-we-measured)** · **[Run locally](#run-locally)**
 
 Built for the **Gnani AI Great Indian AI Internship Challenge**
 
@@ -165,22 +165,22 @@ Each language has 20 fixed prompts; valid cached files are reused. Dynamic medic
 | Frontend | React, TypeScript, Vite, Tailwind CSS, Framer Motion, Lucide |
 | Standalone demo video | Remotion, ffmpeg |
 
-## Repository guide
+## Project structure
 
-| Path | Contents |
+| Folder | Purpose |
 |---|---|
-| `SOLUTION_PITCH.md` | Short hackathon solution pitch |
-| `web/` | Patient and doctor web interface |
-| `app/api/` | API, sessions, language support and intake flow |
-| `gnani.py`, `llm.py` | Speech and LLM provider clients |
-| `extract*.py`, `meds.py`, `redflags*.py` | Extraction, validation, medicine and safety logic |
-| `data/` | Keyterms, question translations and evaluation ground truth |
-| `eval/` | Versioned evaluators, results and scoring notes |
-| `tests/` | Backend and frontend logic checks |
-| `docs/diagram/`, `docs/endcard/` | Standalone presentation pages |
-| `video/` | Standalone Remotion demo project |
+| `app/api/` | FastAPI, sessions, intake flow, languages and clinic access |
+| `web/` | React interface and frontend build configuration |
+| `eval/` | Versioned evaluators, protocols and published results |
+| `tests/` | Backend and doctor-summary regression tests |
+| `data/` | Question translations, keyterms and ground-truth tables |
+| `docs/` | [Solution pitch](docs/SOLUTION_PITCH.md), specifications, handoff and presentation assets |
+| `video/` | Standalone Remotion demo and submission compositions |
+| `archive/` | Earlier Streamlit prototypes and old example outputs |
 
-The original Streamlit entry points and historical evaluation versions remain for reproducibility. The current web app starts through `start.sh`.
+The versioned `extract_*` and `redflags_*` files are pipeline layers corresponding to the evaluation versions shown in Results: extraction v3 builds on v2 and v1; safety v3 uses the v3 rules, while `redflags_v2.py` remains for historical evaluation/tests.
+
+The active pipeline stays at the root; the current web app starts through `start.sh`, `start.ps1` or `start.bat`. Setup instructions are in [SETUP.md](SETUP.md).
 
 ## Development checks
 

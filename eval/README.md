@@ -4,7 +4,7 @@ Run `python eval/run_meds.py` for the default network-free plan. After approval,
 
 The two conditions submit the original M4A bytes to Prisma, without conversion or context. Any future phone simulation or noise processing must first use ffmpeg to decode the source to 16-bit mono WAV; that processing is not part of this clean-audio run.
 
-Ground truth is from `test-scripts.md`. Unknown BP medicine in M11, unknown second sugar medicine in M16, and M19's `none` are retained as unscored rows. Pantocid and Glycomet in the mixed known/unknown cards remain scored. M20 scores only Amlong.
+Ground truth is from `docs/test-scripts.md`. Unknown BP medicine in M11, unknown second sugar medicine in M16, and M19's `none` are retained as unscored rows. Pantocid and Glycomet in the mixed known/unknown cards remain scored. M20 scores only Amlong.
 
 Scoring is frozen before the first real run: lowercase, punctuation removal, fixed Devanagari transliterations, Hindi/English spoken numbers and Devanagari digits, optional spaces inside names. No fuzzy matching. Name boundaries prevent Pan from matching Pantocid or Telma from matching Telmacol. A strength is correct when the name is correct and that exact number appears anywhere in the transcript, as requested; numbers are not assigned to the nearest medicine. This raw-STT presence metric does not detect incorrect extra medicines or validate correction intent.
 

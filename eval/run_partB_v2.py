@@ -62,7 +62,7 @@ def protected_files():
              'setC_per_clip.csv','setC_summary.csv','setB_per_clip_v2.csv','setB_per_session_v2.csv',
              'setB_summary_v2.csv','setC_per_clip_v2.csv','setC_summary_v2.csv','partA_audit_v2.json']
     paths = [OUT / name for name in names]
-    paths += [ROOT / name for name in ['extract.py','redflags.py','gnani.py','meds.py','app.py',
+    paths += [ROOT / name for name in ['extract.py','redflags.py','gnani.py','meds.py','archive/app.py',
         'extract_v2.py','redflags_v2.py','eval/scoring_v2.py','data/setB_ground_truth.csv',
         'data/setC_ground_truth.csv','data/medicines.txt','data/symptoms.txt','prompts.yaml']]
     return {p.relative_to(ROOT).as_posix(): digest(p) for p in paths}
@@ -73,7 +73,7 @@ def freeze(jobs):
         raise RuntimeError('Preserve original model and medium reasoning for this comparison')
     manifest = {'phase':'Part B v2', 'model':llm.settings()[1], 'reasoning_effort':'medium',
         'baseline_hashes':protected_files(),
-        'source_hashes':{name:digest(ROOT/name) for name in ['extract_partB_v2.py','app_extract_v2.py','app_v2.py',
+        'source_hashes':{name:digest(ROOT/name) for name in ['extract_partB_v2.py','app_extract_v2.py','archive/app_v2.py',
             'eval/scoring_partB_v2.py','eval/run_partB_v2.py','llm.py','eval/PART_B_PROTOCOL_v2.md']},
         'jobs':{j['id']:j['cache'].stem for j in jobs}}
     path = ROOT / 'eval/partB_protocol_v2.json'

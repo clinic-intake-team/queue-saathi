@@ -1,4 +1,4 @@
-> Historical development handoff. For the current web app, start with [SETUP.md](SETUP.md).
+> Historical development handoff. For the current web app, start with [SETUP.md](../SETUP.md).
 
 # Clinic Queue Intake — teammate / Antigravity handoff
 
@@ -56,7 +56,7 @@ Real phone lines, account/login systems, longitudinal patient records, additiona
 | `scripts/setup_groq.py` | Explicit model listing and setup completion test. Already performed; not a routine startup step. |
 | `scripts/test_extraction_examples.py` | Eight independently authored development examples; real access requires `--real`. |
 | `prompts.yaml` | Prompt text for P0–P8, RF, RP and fixed follow-ups. |
-| `app.py` | Only a Streamlit Patient/Doctor tab skeleton. Not a functioning intake UI. |
+| `archive/app.py` | Only a Streamlit Patient/Doctor tab skeleton. Not a functioning intake UI. |
 | `tests/` | Last verified suite: 23 offline tests passing. |
 
 **Not implemented yet:** deterministic `flow.py`, dedicated `meds.py` confirmation pipeline, full patient/doctor UI, session persistence, phone/noise processing, Set B ground truth/runner and complete end-to-end evaluation.
@@ -264,4 +264,4 @@ Do not use `git add -A` blindly. Stage explicit code/data/results files, inspect
 
 ## 11. Suggested first message to Antigravity
 
-> Read TEAMMATE_HANDOFF.md and inspect the existing code. Continue in this repository root. Start by auditing missing extraction fields, flow and Set B evaluation infrastructure using your own synthetic examples only. Do not read Set B speaking lines, ground truth or audio content until we agree the protocol. You may inventory filenames and durations, but show a full copy mapping and stop before copying. Keep GNANI_MOCK=1; do not make real Gnani or Groq calls without an explicit call-count gate and my confirmation. Preserve existing results and protocol history. Do not commit secrets or automatically publish voice data. Give me the concrete next implementation plan and the gaps you verified.
+> Read docs/TEAMMATE_HANDOFF.md and inspect the existing code. Continue in this repository root. Start by auditing missing extraction fields, flow and Set B evaluation infrastructure using your own synthetic examples only. Do not read Set B speaking lines, ground truth or audio content until we agree the protocol. You may inventory filenames and durations, but show a full copy mapping and stop before copying. Keep GNANI_MOCK=1; do not make real Gnani or Groq calls without an explicit call-count gate and my confirmation. Preserve existing results and protocol history. Do not commit secrets or automatically publish voice data. Give me the concrete next implementation plan and the gaps you verified.

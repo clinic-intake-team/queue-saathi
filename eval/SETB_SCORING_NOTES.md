@@ -24,7 +24,7 @@ A measured-temperature question may contain both measured and temperature. F's v
 
 The user supplied S02 pain location = back of head OR near neck, and pain score = 5, for both speakers. Either location is accepted; the score must equal 5. Ground truth and complete-record scoring now cover all 20/20 sessions.
 
-Ground truth follows test-scripts.md Set B with the user's sex and duration instructions: ch male/tm female; S03 accepts 0 or 1 day; S09 one day; S10 corrected four days. Three months is operationalized as 90 days before the run. S05 frequency accepts any numeric value from 5 through 6. S03 location requires left-arm radiation. S04 phlegm requires present=true and yellow/yellowish (English/Hinglish/Hindi variants). S07 location requires right knee; S08 front of head/forehead/frontal. Other numeric follow-up facts are exact and booleans remain booleans.
+Ground truth follows docs/test-scripts.md Set B with the user's sex and duration instructions: ch male/tm female; S03 accepts 0 or 1 day; S09 one day; S10 corrected four days. Three months is operationalized as 90 days before the run. S05 frequency accepts any numeric value from 5 through 6. S03 location requires left-arm radiation. S04 phlegm requires present=true and yellow/yellowish (English/Hinglish/Hindi variants). S07 location requires right knee; S08 front of head/forehead/frontal. Other numeric follow-up facts are exact and booleans remain booleans.
 
 ## Patient records and scoring
 

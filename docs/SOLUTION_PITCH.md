@@ -21,4 +21,4 @@ These recordings were used to develop and refine the prototype; the results are 
 **Next steps.** Gather feedback from clinic staff, test with more speakers and realistic clinic noise, and extend Indian-language coverage. Real deployment would require proper staff authentication, encrypted storage and clinical validation.
 
 **Project:** [GitHub repository](https://github.com/clinic-intake-team/Gnani_Hackathon)  
-**Evaluation evidence:** [Medicine-name results](eval/results/setA_summary.csv) · [Session evaluation guide](eval/setB_README.md)
+**Evaluation evidence:** [Medicine-name results](../eval/results/setA_summary.csv) · [Session evaluation guide](../eval/setB_README.md)

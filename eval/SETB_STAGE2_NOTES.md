@@ -21,7 +21,7 @@ P2/P4/F use keyword OR validated LLM red flags. Unclear, declined, question or i
 
 meds.py uses rapidfuzz ratio >=85 against data/medicines.txt, normalized phrases and spoken strengths. fuzzy=False provides exact matching for the later evaluator. Strength is taken only from the immediately following number, not inferred from a vocabulary entry or borrowed from another medicine. Explicitly negated/corrected names are excluded. Purpose-only unknowns retain a display such as BP medicine (name unknown). Matching requests confirmation; only validated explicit R1 agreement sets confirmed. A correction requires another read-back rather than silently confirming an edited list.
 
-Development inputs were restricted to the 40 cached STT responses for recordings/ch_M01.m4a through ch_M20.m4a (keyterms off/on). scripts/check_meds_ch_setA.py has no API fallback and never enumerates tm clips or arbitrary cache entries. See examples/meds_ch_setA_development.json. This is a development inspection, not a new scored Set A result.
+Development inputs were restricted to the 40 cached STT responses for recordings/ch_M01.m4a through ch_M20.m4a (keyterms off/on). scripts/check_meds_ch_setA.py has no API fallback and never enumerates tm clips or arbitrary cache entries. See archive/examples/meds_ch_setA_development.json. This is a development inspection, not a new scored Set A result.
 
 ## Verification and limits
 
@@ -33,6 +33,6 @@ Run:
 .venv/bin/python scripts/check_meds_ch_setA.py
 ```
 
-The eight independently authored sentences in examples/setB_stage2_outputs.json use explicitly simulated provider responses. They exercise the real extraction routing, per-field validation and red-flag code with network blocked; they do not measure live Groq accuracy. No real calls have been authorized or made at this stage.
+The eight independently authored sentences in archive/examples/setB_stage2_outputs.json use explicitly simulated provider responses. They exercise the real extraction routing, per-field validation and red-flag code with network blocked; they do not measure live Groq accuracy. No real calls have been authorized or made at this stage.
 
 No Set B speaking lines, script table, ground truth or audio contents were read while implementing Stage 2. No Set B evaluator or ground truth was built. Existing evaluation results were left intact. Stage 2 ends at the user's confirmation gate before Stage 3.

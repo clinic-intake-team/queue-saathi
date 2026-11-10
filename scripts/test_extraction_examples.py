@@ -31,7 +31,7 @@ def main():
         row={'question':question,'transcript':transcript,'extracted':result,'red_flags':flags}
         rows.append(row)
         print(json.dumps(row,ensure_ascii=False,indent=2),flush=True)
-    output=extract.ROOT/'examples/step1_outputs.json'
+    output=extract.ROOT/'archive/examples/step1_outputs.json'
     output.parent.mkdir(exist_ok=True)
     output.write_text(json.dumps(rows,ensure_ascii=False,indent=2),encoding='utf-8')
     print('Saved eight independently authored examples to '+str(output),flush=True)

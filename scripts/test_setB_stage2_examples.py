@@ -52,7 +52,7 @@ def main():
                        extracted=result, red_flags=flags, provider='simulated_offline_fixture')
             rows.append(row)
             print(json.dumps(row, ensure_ascii=False))
-    destination = Path(__file__).resolve().parents[1] / 'examples/setB_stage2_outputs.json'
+    destination = Path(__file__).resolve().parents[1] / 'archive/examples/setB_stage2_outputs.json'
     destination.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + '\n')
 
 
