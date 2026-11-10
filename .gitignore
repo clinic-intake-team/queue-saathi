@@ -8,8 +8,6 @@ raw/**
 !raw/**/
 !raw/**/.gitkeep
 !raw/README.md
-!raw/setB_chill/**/*.m4a
-!raw/setB_tm/**/*.m4a
 assets/prompts/*.wav
 assets/prompts/*.mock
 
@@ -43,3 +41,17 @@ video/**/*.ogg
 .env.*
 !.env.example
 data/sessions/
+
+# Never publish voice recordings or demo media (including files outside raw/).
+*.m4a
+*.wav
+*.mp3
+*.mp4
+*.mov
+*.aac
+*.ogg
+*.flac
+*.webm
+*.aiff
+*.aif
+*.opus
