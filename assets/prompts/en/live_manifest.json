@@ -1,0 +1,182 @@
+{
+  "P0": {
+    "text_sha256": "3db6a6fd352f51343d789381768684995081f2cd7df3efe634931d4969a42bcb",
+    "audio_sha256": "794456eaaa48a55bb36d560d59ee77da606b8920ef13fa2e429fd78ca19c6355",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  },
+  "P1": {
+    "text_sha256": "1b69ad3f766dca2617e4b086af805cc5e8307c723da72c5afa927de21302e80d",
+    "audio_sha256": "daccae37579cd1013d6751c42224a3d19e50da122aa5c5a6d35e3365d37b4c90",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  },
+  "P2": {
+    "text_sha256": "1011496de970efab89e70c6313e30145418d58c1b97be09b9976cc10115d27ba",
+    "audio_sha256": "3ff948fca096ed801c06df37057ad81eaa3849ebf59f2e385d8e78dcbc997b48",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  },
+  "P3": {
+    "text_sha256": "441fea752c0ff59fd0376cc02555c90e8ea7775c8ee7488329c1deb60208b6bd",
+    "audio_sha256": "f0e58c4f91981bf54262ce18dbf48d853a806f24cc61257c30b1e006c60bb648",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  },
+  "P4": {
+    "text_sha256": "6561235a8e5562ab813497b0004cd8b9201f2bf1f7569e8c354bfe1a1b2f0305",
+    "audio_sha256": "7d59e9ba423dc684a9740df4fd80562f5e9311c972e3ae4fc08cd0afe5d88142",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  },
+  "P5": {
+    "text_sha256": "a2a327e64e77784942c700dd73d76093f2869d34d7ac030543050a19f2425578",
+    "audio_sha256": "2b3ea9c088de340df1ce7a07908ddc8bf7a9ef4debd7ec6ce41a555599769e50",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  },
+  "P6": {
+    "text_sha256": "59fae0b896783716360a6126420b37b06425a6f1391e0c92d6b2aedcac751784",
+    "audio_sha256": "e6e2745a2d69d55e0650d921312b47d5a243ebc85017548427ee8e1ac04b1842",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  },
+  "P7": {
+    "text_sha256": "a04862afa761620c0edf77f753d2b5e575de48478cebe7538fcebbcd9320dd23",
+    "audio_sha256": "1fb74b1bb361f4f9a95821798a07b7a13ae5b0b70e9fdb81bf6427bbb74e2059",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  },
+  "P8": {
+    "text_sha256": "719d0514db5a0d2b2c65b470b941b91e4ad029f6186e125056b05d379dc904b6",
+    "audio_sha256": "d1b50f2bcf2cb8821b3d6db5bf31dd617a8802170d77f2b131a0d50c80830281",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  },
+  "RF": {
+    "text_sha256": "d91b958ceb6768e81b9d536bc1e7bd404a6a9fbeedaef59e7c804a6754fc3cf4",
+    "audio_sha256": "d96e2a50dcbe92dfd4cb0f07d398eb654204ddb401e0d05055d43995e11881c9",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  },
+  "RP": {
+    "text_sha256": "c7011ee51d4ea873da786df86586b2d028ed8b139332a3f0ad1f75e5e596980b",
+    "audio_sha256": "ca77f7866b29824dd542169db55a78f29107f54aa40398c6a4eee59c7661dd7c",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  },
+  "F_FEVER_1": {
+    "text_sha256": "6a9b946e743e2986f40fa52c1f4de96355dff32665fb57e5775dde4e7b38ff5a",
+    "audio_sha256": "c9ad3ff733040a1ce56f570a7b7e05a2bbd4a31daecf01c7d4622ebe929c81d2",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  },
+  "F_FEVER_2": {
+    "text_sha256": "6345a9cca46f36f319c7217c72b4fa7f9c8a0f345b9e52876270e43854bfaf45",
+    "audio_sha256": "494d8f58304215b4c5d522004a52be310474b4e33b26bf16d697195747ac6558",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  },
+  "F_PAIN_1": {
+    "text_sha256": "0d31251b0367783b7b8fee6fa57caacb747822679e3fca494d0609dbbdf98c7f",
+    "audio_sha256": "d8757fb999b415a6103916cdb280f687278fdd88e585d548ec41112911a5d17c",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  },
+  "F_PAIN_2": {
+    "text_sha256": "f4a85e729f1f1797d9114477d6d25bfc7f1e6dfa0e12236e8d9336839260b2cd",
+    "audio_sha256": "74af3a3f32285c9eebae952a9950cbd2c3eb6105e98a68dac25e84457e8ef378",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  },
+  "F_COUGH_1": {
+    "text_sha256": "79bca1c9e30b7fac17c51c280216225f4474676484e2a604c15610f60b510e87",
+    "audio_sha256": "73f4800089ae636d65303db0228260b8018327f6e339c436387a6c290f729095",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  },
+  "F_COUGH_2": {
+    "text_sha256": "4ca3e8564d994b1842c67ab476c9beaaf6c51484a270da0f4ad9bea557acfbfe",
+    "audio_sha256": "9ad9856c8af4dc8182bf4c92e5cb69853fde57c2f7fb997970f2bfcc8bd0515a",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  },
+  "F_STOMACH_1": {
+    "text_sha256": "8706b7ba57f1b1fd7c8a9de4931dd76cf6b12f788a57514dcb6b853bd5642a0a",
+    "audio_sha256": "3adbf9bee289aeb40735565a6f3facc1c857a85848f8bef12e8ddea4add11ea8",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  },
+  "F_CHRONIC_1": {
+    "text_sha256": "43307c2138a1faf3d027e0308fa782cb984af062c3e869065a0e50dbfdc38600",
+    "audio_sha256": "1080f100647ea0cc0036f84ae5df68a498805480766dc4820699dd594d077834",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  },
+  "F_OTHER_1": {
+    "text_sha256": "30a0045710b0d760f19ebc80212f05284c3cb4f7fcdfe1dff546fce13ba92678",
+    "audio_sha256": "5d2366cd8d82771985bff0b7ebbaed2f340ed78930f76c63499f069a56959a06",
+    "voice": {
+      "model": "timbre-v3.0",
+      "voice": "Shivani",
+      "language": "hi-en"
+    }
+  }
+}

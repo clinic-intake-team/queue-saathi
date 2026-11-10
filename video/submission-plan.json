@@ -1,0 +1,77 @@
+{
+  "composition": "Submission",
+  "target_duration_seconds": 150,
+  "stage": "stage 3 complete; rendered and validated",
+  "voice": "Avinash",
+  "model": "timbre-v3.0",
+  "speed": 1.0,
+  "voiceover_line_6": "It moves through short, simple questions, like how long the problem has lasted.",
+  "clipF": {
+    "source": "patient1_clean.mp4",
+    "segments": [
+      [
+        56.733333,
+        58.1
+      ],
+      [
+        61.166667,
+        61.833333
+      ]
+    ],
+    "approved": true
+  },
+  "proposed_clips": {
+    "doctorQueue": {
+      "source": "doctor.mov",
+      "start": 12.0,
+      "end": 16.0,
+      "notes": "PIN screen ends before this interval; Token 31 red-flag queue entry is above Token 14."
+    },
+    "doctorRed": {
+      "source": "doctor.mov",
+      "start": 44.5,
+      "end": 51.5,
+      "evidence_speech_approx": [
+        45.5,
+        49.19
+      ],
+      "notes": "Token 31 red banner and its evidence player. Intentional visual holds around playback."
+    },
+    "doctorFever": {
+      "source": "doctor.mov",
+      "start": 17.5,
+      "end": 27.5,
+      "remove_intervals": [
+        [
+          23.0,
+          23.5
+        ]
+      ],
+      "evidence_speech_approx": [
+        22.61,
+        25.81
+      ],
+      "notes": "Token 14 scroll: complaint, medicines, allergies. Remove 0.5s within the playback pause; estimated cut length 9.5s."
+    },
+    "resultsStats": {
+      "source": "home.mov",
+      "start": 15.0,
+      "end": 18.0,
+      "last_frame_hold_seconds": 1.0,
+      "notes": "Crop to the real statistics row only; do not show the illustrative doctor mock below. Silent source."
+    }
+  },
+  "voiceover_actual_calls": 13,
+  "cut_outputs": [
+    "clipF.mp4",
+    "doctorQueue.mp4",
+    "doctorRed.mp4",
+    "doctorFever.mp4",
+    "resultsStats.mp4"
+  ],
+  "output": "/Users/sagarp/Desktop/demo_video/queuesaathi_submission.mp4",
+  "duration_seconds": 150,
+  "frames": 4500,
+  "fps": 30,
+  "original_60_second_version_unchanged": true
+}

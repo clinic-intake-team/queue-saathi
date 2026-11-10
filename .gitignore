@@ -1,53 +1,39 @@
-.env
+# Secrets and local environments
+.env*
 .venv/
+venv/
 __pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+
+# Private recordings, sessions, provider responses and logs
+raw/
+recordings/
+demo_video/
 cache/
 logs/
-recordings/
-raw/**
-!raw/**/
-!raw/**/.gitkeep
-!raw/README.md
-assets/prompts/*.wav
-assets/prompts/*.mock
-
-# Local UI patient data and uploads (never push)
+data/sessions/
 data/ui_sessions/
+data/sessions_archive/
+
+# Generated builds, dependencies and private presentation captures
 web/node_modules/
 web/dist/
 web/*.tsbuildinfo
-assets/prompts/live_manifest.json
-assets/prompts/live_manifest.tmp
-assets/prompts/hi/
-assets/prompts/en/
-data/sessions_archive/
-
-# Standalone demo video: dependencies, private captures and rendered media
-video/node_modules/
 video/out/
+video/node_modules/
 video/public/captures/
 video/public/media/
-video/**/*.mp4
-video/**/*.mov
-video/**/*.webm
-video/**/*.m4a
-video/**/*.mp3
-video/**/*.wav
-video/**/*.aac
-video/**/*.ogg
 
-# Public-repository hygiene
-.DS_Store
-.env.*
-!.env.example
-data/sessions/
-
-# Never publish voice recordings or demo media (including files outside raw/).
+# Media and archives are private unless explicitly allowlisted below
 *.m4a
 *.wav
 *.mp3
-*.mp4
 *.mov
+*.mp4
+*.mkv
+*.zip
 *.aac
 *.ogg
 *.flac
@@ -55,3 +41,12 @@ data/sessions/
 *.aiff
 *.aif
 *.opus
+
+# Fixed Timbre questions only: no patient recordings or dynamic read-backs
+!assets/prompts/*.wav
+!assets/prompts/hi/*.wav
+!assets/prompts/en/*.wav
+assets/prompts/*.mock
+assets/prompts/**/*.mock
+assets/prompts/*.tmp
+assets/prompts/**/*.tmp

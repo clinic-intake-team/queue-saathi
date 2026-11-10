@@ -1,0 +1,43 @@
+{
+  "stage": 1,
+  "stage1Audio": "none",
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 30,
+  "plannedDurationSeconds": 60,
+  "clips": [
+    {
+      "file": "~/Desktop/demo_video/clipA.mp4",
+      "startSeconds": 11.5,
+      "durationSeconds": 10,
+      "originalAudio": true
+    },
+    {
+      "file": "~/Desktop/demo_video/clipB.mp4",
+      "startSeconds": 25.5,
+      "durationSeconds": 8,
+      "originalAudio": true
+    },
+    {
+      "file": "~/Desktop/demo_video/clipC.mp4",
+      "startSeconds": 33.5,
+      "durationSeconds": 6,
+      "originalAudio": true
+    }
+  ],
+  "voiceoverDirectory": "~/Desktop/demo_video/vo/",
+  "voiceoverPattern": "vo01.m4a, vo02.m4a, ... in script order",
+  "musicOptional": "~/Desktop/demo_video/music.mp3",
+  "captionPolicy": "Burn in actual spoken words only, aligned to the received audio; do not invent transcripts.",
+  "mixPolicy": "No voice-over during real clips; real clips at full level; optional music -24 dB and ducked under speech; final mix about -16 LUFS.",
+  "durationPolicy": "Stage 2 measures the supplied VO files, extends scenes that need more time and reports the revised duration and all section starts.",
+  "stage2Status": "Final rendered with eight Avinash lines, real clip audio, and burned-in captions; no music supplied.",
+  "currentPreview": "out/preview_with_clips.mp4",
+  "currentPreviewDurationSeconds": 59.333333333333336,
+  "openingDurationSeconds": 3.5,
+  "finalOutput": "out/queuesaathi_demo.mp4",
+  "finalDurationSeconds": 60,
+  "finalTimingPolicy": "Exactly 1800 frames / 30 fps; approved revised VO 2 and 7, no clip or speech truncation."
+}

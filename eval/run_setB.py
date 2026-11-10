@@ -227,7 +227,7 @@ def measured_temperature(text):
 
 def resolved_medicines(p5, r1, *, fuzzy):
     item = p5['extracted']['medicines']
-    candidates = meds.parse(p5['transcript'], fuzzy=fuzzy)
+    candidates = meds.parse(p5['transcript'], extracted=p5['extracted'], fuzzy=fuzzy)
     if item['status'] != 'ok':
         return dict(item), candidates
     confirmation = r1['extracted']['confirmed']
@@ -235,7 +235,7 @@ def resolved_medicines(p5, r1, *, fuzzy):
     if confirmation['status'] == 'ok' and confirmation['value'] is False:
         if correction['status'] != 'ok':
             return envelope(), candidates
-        changed = meds.parse(correction['value'], fuzzy=fuzzy)
+        changed = meds.parse(correction['value'], extracted=p5['extracted'], fuzzy=fuzzy)
         if changed:
             candidates = changed
         elif len(candidates) == 1:
@@ -434,7 +434,7 @@ def failure_cause(field, score, relevant):
     if field == 'complaint':
         supported = all(concept_matches(transcript, v) for v in score['expected'])
     elif field.startswith('medicines'):
-        counts = medicine_counts([{'name': m['name'], 'strength': m['strength'], 'purpose': m['purpose']} for m in meds.parse(transcript)], score['expected'])
+        counts = medicine_counts([{'name': m['name'], 'strength': m['strength'], 'purpose': m['purpose']} for m in meds.parse(transcript,extracted={'medicines':{'status':'ok','value':[m for c in relevant for m in (c.get('extracted',{}).get('medicines',{}).get('value') or [])]}})], score['expected'])
         supported = counts['names_correct'] == counts['names_total'] and counts['strengths_correct'] == counts['strengths_total']
     elif field in {'age', 'token', 'duration_days'}:
         targets = score['expected'] if isinstance(score['expected'], list) else [score['expected']]

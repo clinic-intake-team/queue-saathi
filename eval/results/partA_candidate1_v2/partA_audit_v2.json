@@ -1,0 +1,62 @@
+{
+  "phase": "Part A code-only v2",
+  "api_calls": {
+    "Prisma": 0,
+    "Groq": 0
+  },
+  "v1_files_unchanged": true,
+  "v1_sha256": {
+    "eval/results/setB_mapping_review.csv": "d1672d426c8ab8798ba1142a4203431b078ca699dfe9f4021adbd5e53e82bda3",
+    "eval/results/setB_run_audit_v1.json": "d81888a48dd1b5177a2d3b268611ac7c6d807ea858cd2644a96ab8665c8e2c82",
+    "eval/results/setB_accuracy_review.csv": "e313e50134bd50f3f8965262d354d0b1a1e04ee48869e79ee57e89ac840be8b7",
+    "eval/results/setC_summary_v1.csv": "8bfac2d5a544892d90c750c95274a429109a1c73bab256874358f1df166a520e",
+    "eval/results/setA_summary.csv": "d57416b58dc1b2205be49a4cdf3d2cd09e7fb7dc4aec5ccd60ab62c8994f1550",
+    "eval/results/setC_per_clip.csv": "0bedb4de6dd7c6b79d1807eeaf6c42e5b3830f8b46ce88c81d9099e5dc3dda33",
+    "eval/results/setB_summary.csv": "bd6a048a8d769b8750cfc2ff99bcf0c113e1eed7808e60e38fc6bc30ee1bb2ef",
+    "eval/results/setB_per_clip.csv": "74618de2a66c2e4b9b971a1ef39618df3a8460bba77e9df362b8c6848c243603",
+    "eval/results/setB_accuracy_review.md": "2bcca87c9a32112c533656424a8a5694818804c61b40847ec599182d0bfb85c3",
+    "eval/results/setB_per_session.csv": "c2d9d5733a1f15bc6f5436bf2439503946a5e3477630642991a9c2fce1adb73d",
+    "eval/results/setA_per_clip.csv": "0139951c80f452c7744d78a6ad8302de1bc08aabecfd6d91203f73a57e4cb8bb",
+    "eval/results/setB_failures_v1.txt": "35380cdc7425327ee65fcf8e32420b96d8364ed0c5271b5469f882c82b6d80b3",
+    "eval/results/setB_per_recording.csv": "01071ce298c1e0051b0199cb970f3ecda080d296eefda8ef6fb667318511dda6",
+    "eval/results/setC_per_clip_v1.csv": "53153c2104d8af129a0be93f0dc9ca7c7d6e02341c680fc67d5003ff6de8ff6d",
+    "eval/results/setB_inventory.csv": "d1672d426c8ab8798ba1142a4203431b078ca699dfe9f4021adbd5e53e82bda3",
+    "eval/results/SETB_V1_REPORT.md": "0c204f22f69126a60dae589e4c2378066f4e5c63bb6679ea73ce47cee61396b5",
+    "eval/results/setC_summary.csv": "4e7d3c443f8a8d002c8ae3079ce07197a3dd38dae0b9eeb9b01e51b59bb16006",
+    "eval/results/setC_reasoning_low_20261106T191940Z/audit.json": "0a0fb0e6aef8ff1823fdb7a83d3b780bb9784d2f73251120fb9d42b0a056c7bc",
+    "eval/results/setC_reasoning_low_20261106T191940Z/COMPARISON.md": "0d8961c365c6b76903cd7f1c691bc0289ec2331f9804abf31341de35f9e417ff",
+    "eval/results/setC_reasoning_low_20261106T191940Z/setC_comparison_run2_vs_low.csv": "a60e81ea6821fcb75638799f0b5d8d3de280c652b2053e2369c636e6d5e402f6",
+    "eval/results/setC_reasoning_low_20261106T191940Z/protocol.json": "770c2c6c347f39200f680f1177664861bb44a1b215c1efd6c9a1fa7b5eed1dad",
+    "eval/results/setC_reasoning_low_20261106T191940Z/run2_summary.csv": "4e7d3c443f8a8d002c8ae3079ce07197a3dd38dae0b9eeb9b01e51b59bb16006",
+    "eval/results/setC_reasoning_low_20261106T191940Z/setC_per_clip_low.csv": "152bc71b659292b83bb8b080bc7e2cc3096ac6c31b44dc27a68f9d3f13781caa",
+    "eval/results/setC_reasoning_low_20261106T191940Z/setC_summary_low.csv": "d5e2bea70e54fbb996a1e45d05f5295f4231028e08b97922da0d0eab029ae38b",
+    "extract.py": "fac5d79c7e948c919703f5cb1c51a4040165a139983d5d97ebfa2ad6d45a9477",
+    "redflags.py": "db35f5efa78ac8cd0bd33c8d0fa966f20616360cd5c0d441a9223205d4f19bc5",
+    "llm.py": "9b2235411fd792408d46f1d745200512c8ae8f8c95045e465143ed3b07b53556",
+    "gnani.py": "c895ea12a837ef11e46a7701cf0ca289da2820cbf84f14ed63cb1a5eb4163dc0",
+    "meds.py": "f22b7d149cc6552d7efadec14e9d72f3c591c7367ecaab13e4267c5b2c2fb38d",
+    "eval/run_setB.py": "443f2e266106a0529aa30cad3df7a68cb2024337046a16bfcd229f3aae6b313b",
+    "eval/run_setC.py": "f3ceaa7d6579f89f6ed8dd0a3c5d9617f8a91cc3e9eeb30ba554c34a015f72b6",
+    "data/setB_ground_truth.csv": "188aba3a2dc0c70ee191364bac0b6ae3305a526a9292b782a07b5daea9803a55",
+    "data/setC_ground_truth.csv": "e6336d53b2f0cf0e4459f222077024a13b02f3e41a286a301fda496d2953a67e",
+    "data/medicines.txt": "3fdfc1bfc26e2978dd8f29f17d12ad6d12ab2aa70ef3415eff844ab5fbfb7b46",
+    "data/symptoms.txt": "f8d159067fc0a4ae2fc3f7c1fdc0e218ef470ab03c3a75eacd81f88201510d80",
+    "prompts.yaml": "71598cf52f60a0910f906ed148dc6e465693526491058ab6667882b078d19b8a",
+    "eval/setB_full_v1_protocol.json": "5148d7263d6db429abb5d868afb36900bbe0fc21b4559cd4eb4843eb36ab9b80",
+    "eval/setC_development_v2_protocol.json": "5c9ee9cdd50d828bcb5d2699d755d905cdd77c8b324131d6ce7251d57c06b11f"
+  },
+  "source_generations_B": {
+    "raw_response_in_v1_csv": 212
+  },
+  "source_generations_C": {
+    "original_parsed_generation_cache": 25,
+    "raw_response_in_v1_csv": 23
+  },
+  "v2_source_sha256": {
+    "extract_v2.py": "1c88a0feaef06c43f415daa0e4667d54a54494989127d03c96d38ea0c378a038",
+    "redflags_v2.py": "b9d2ccbde6e08764159bad68c7c08a290fabaf7a86ee76e17a37f1c5d0709c69",
+    "eval/scoring_v2.py": "ebce538a2c739361d9863c76489b7ef3061d29b1d45cede5e61eb79a71294313",
+    "eval/rescore_partA_v2.py": "8a0c95ed94cce97aae311c40ee5a197e7a0c6b08880233f469652fa4b8ebff94",
+    "eval/SCORING_NOTES.md": "eded7eb7e79ccfeb7f023a0e56fe20512c15cd5253131912189c9beb14150929"
+  }
+}

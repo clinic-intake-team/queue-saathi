@@ -1,0 +1,27 @@
+{
+  "name": "queuesaathi-demo-video",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.tsx",
+    "typecheck": "tsc --noEmit",
+    "render:preview": "node scripts/render.mjs",
+    "render:clips": "node scripts/render.mjs --clips",
+    "render:final": "node scripts/render.mjs --final",
+    "render:submission": "node scripts/render_submission.mjs"
+  },
+  "dependencies": {
+    "remotion": "4.0.542",
+    "@remotion/cli": "4.0.542",
+    "@remotion/bundler": "4.0.542",
+    "@remotion/renderer": "4.0.542",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "typescript": "~5.7.3",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
+  }
+}

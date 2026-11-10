@@ -1,0 +1,24 @@
+{
+  "prisma_calls": 0,
+  "logical_reextraction_rows": 64,
+  "by_dataset": {
+    "B": {
+      "rows": 40,
+      "new_primary_calls": 40
+    },
+    "C": {
+      "rows": 24,
+      "new_primary_calls": 14
+    }
+  },
+  "new_primary_groq_calls": 54,
+  "known_repairs": 0,
+  "max_additional_repairs": 54,
+  "max_logical_groq_calls": 108,
+  "duplicate_or_completed_cache_rows": 10,
+  "unchanged_rows_reused": {
+    "B": 172,
+    "C": 24
+  },
+  "retry_policy": "up to five retries for minute/5xx; daily 429 saves and exits"
+}

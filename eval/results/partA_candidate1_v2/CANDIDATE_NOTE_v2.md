@@ -1,0 +1,1 @@
+Intermediate implementation check, not final v2. A generic comma-clause negation leakage defect was found and corrected with an independently authored regression test before the final offline re-score. No API calls or v1 changes.

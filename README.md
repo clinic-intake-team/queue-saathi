@@ -5,7 +5,7 @@
 
 Voice-first clinic intake in **Hinglish · हिंदी · English**
 
-**[One-page solution pitch](SOLUTION_PITCH.md)** · **[How it works](#how-it-works)** · **[Results](#what-we-measured)** · **[Run locally](#run-locally)**
+**[One-page solution pitch](SOLUTION_PITCH.md)** · **[Setup guide](SETUP.md)** · **[How it works](#how-it-works)** · **[Results](#what-we-measured)** · **[Run locally](#run-locally)**
 
 Built for the **Gnani AI Great Indian AI Internship Challenge**
 
@@ -71,7 +71,7 @@ One observed transcription error was **“Telma 40” → “Telma H.”** Read-
 
 ### 1. Install dependencies
 
-Requirements: **Python 3.12+**, **Node.js 20.19+ or 22.12+**, and npm. Audio conversion uses ffmpeg; the Python dependencies include an `imageio-ffmpeg` fallback. Browser microphone access requires permission.
+Requirements: **Python 3.12+**, **Node.js 22.18+**, and npm. Audio conversion uses ffmpeg; the Python dependencies include an `imageio-ffmpeg` fallback. Browser microphone access requires permission.
 
 ```sh
 git clone https://github.com/clinic-intake-team/Gnani_Hackathon.git
@@ -82,10 +82,10 @@ python -m pip install -r requirements.txt
 npm --prefix web ci
 ```
 
-Create `.env` from `.env.example` if you do not already have one:
+Create `.env` from `config/env.example` if you do not already have one:
 
 ```sh
-cp -n .env.example .env
+cp -n config/env.example .env
 ```
 
 ### 2. Start the app

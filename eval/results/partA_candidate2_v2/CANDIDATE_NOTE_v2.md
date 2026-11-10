@@ -1,0 +1,1 @@
+Intermediate implementation check, not final v2. Clause isolation preserved positive symptoms but a standalone denial before a comma needed to remain attached. Corrected using a general independently authored denial-prefix test before finalizing. No API calls or v1 changes.

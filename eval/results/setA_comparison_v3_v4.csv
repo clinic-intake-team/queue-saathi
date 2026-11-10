@@ -1,0 +1,5 @@
+speaker,condition,metric,v3,v4,baseline_note
+ch,keyterms_off,names,16/29,16/29,Original frozen raw-STT result; no separate Set A v3 or cached LLM extraction exists
+ch,keyterms_off,name_strength,7/11,7/11,Original frozen raw-STT result; no separate Set A v3 or cached LLM extraction exists
+ch,keyterms_on,names,28/29,28/29,Original frozen raw-STT result; no separate Set A v3 or cached LLM extraction exists
+ch,keyterms_on,name_strength,9/11,9/11,Original frozen raw-STT result; no separate Set A v3 or cached LLM extraction exists

@@ -19,79 +19,101 @@ def vocabulary():
     return terms
 
 
-def parse(transcript, *, fuzzy=True):
-    """Return transcript-supported names/strengths and purpose-only unknowns.
+# Words that describe complaints/anatomy are never medicine identities.
+NON_MEDICINES = set('palm palms pain pains dard pet haath hath hand hands sir head headache stomach arm leg chest throat back fever cough blood'.split()) | {'दर्द','पेट','हाथ','सिर','बुखार','खांसी'}
+CONTEXT = r'\b(?:goli|tablet|tablets|dawai|dawa|medicine|medicines|take|taking|drink|drinking|peeta|peeti|pi raha|pi rahi|leta|leti|le raha|le rahi)\b|गोली|गोलियाँ|दवा|लेता|लेती|ले रहा|ले रही|पी रहा|पी रही|पीता|पीती'
+DENIAL = r'\b(?:no\s+(?:\w+\s+){0,2}medicines?|not taking any|koi (?:dawai|dawa|goli) nahi|nahi le raha|nahi le rahi|nahi leta|nahi leti)\b|कोई दवा नहीं|दवाई नहीं|नहीं ले रहा|नहीं ले रही'
 
-    Greedy non-overlapping phrase matching, ratio >=85, exact-only if fuzzy=False.
-    Strength belongs to the immediately following numeric phrase, never another medicine.
-    Matching alone needs confirmation; only an explicit R1 can confirm it later.
+
+def explicit_denial(transcript):
+    return bool(re.search(DENIAL, transcript.lower()))
+
+
+def _denied(tokens, start, end):
+    before = tokens[max(0,start-4):start]
+    # Contrast starts a new assertion ("no BP medicine but I take Dolo").
+    for boundary in ('but','lekin','लेकिन'):
+        if boundary in before:before=before[before.index(boundary)+1:]
+    # In a correction 'X nahi, Y hai', the postposed denial belongs to X.
+    if len(before)>=2 and before[-1] in {'nahi','nahin','नहीं'} and any(before[-2]==normalize(name).split()[-1] for name in vocabulary()):
+        before=[]
+    after = tokens[end:end+4]
+    return (any(t in {'no','not','nahi','nahin','नहीं'} for t in before)
+            or any(t in {'nahi','nahin','नहीं'} for t in after[:2]))
+
+
+def parse(transcript, *, extracted=None, fuzzy=True):
+    """Confirm ONLY validated LLM medicine candidates; never discover names in free text.
+
+    Missing/invalid extraction fails closed. Short brands require exact tokens and
+    nearby medication context or strength. Strength is taken only from the audio
+    transcript's immediately following number, never the vocabulary's default.
     """
-    text = normalize(transcript)
-    tokens = text.split()
-    candidates = []
-    for name in vocabulary():
-        canonical = normalize(name).replace(' ', '')
-        size = len(normalize(name).split())
-        for start in range(len(tokens)):
-            for length in range(1, max(size + 2, 3)):
-                end = start + length
-                if end > len(tokens):
-                    continue
-                phrase = tokens[start:end]
-                if any(t.isdecimal() for t in phrase):
-                    continue
-                score = ratio(''.join(phrase), canonical)
-                if score >= (THRESHOLD if fuzzy else 100):
-                    candidates.append((score, len(canonical), start, end, name))
-    used = set()
-    selected = []
-    denied_names = set()
-    for score, _, start, end, name in sorted(candidates, key=lambda c: (-c[0], -c[1], c[2], c[4])):
-        positions = set(range(start, end))
-        if not positions & used:
-            # Do not collect a medicine explicitly denied or superseded by a correction.
-            before = tokens[max(0, start - 2):start]
-            after = tokens[end:end + 2]
-            negated = (any(t in {'no', 'not'} for t in before)
-                       or bool(after and after[0] in {'nahi', 'nahin', 'नहीं'}))
-            if negated:
-                denied_names.add(name)
-            if not negated:
-                selected.append((start, end, name, score))
-                used |= positions
-    selected.sort()
+    item = extracted.get('medicines', extracted) if isinstance(extracted, dict) else None
+    if not isinstance(item, dict) or item.get('status') != 'ok' or not isinstance(item.get('value'), list):
+        return []
+    tokens = normalize(transcript).split()
     medicines = []
-    for start, end, name, score in selected:
-        if name in denied_names:
+    for candidate in item['value']:
+        if not isinstance(candidate, dict):continue
+        name = candidate.get('name')
+        if not name:
+            purpose = candidate.get('purpose')
+            if not isinstance(purpose,str) or not purpose.strip():continue
+            aliases={'BP':['bp','blood pressure','ब्लड प्रेशर','बीपी'],'sugar':['sugar','diabetes','शुगर','मधुमेह'],'thyroid':['thyroid','थायरॉइड','थायराइड']}
+            purpose=next((key for key,values in aliases.items() if normalize(purpose) in values),purpose)
+            phrases=[normalize(v).split() for v in aliases.get(purpose,[purpose])]
+            positions=[(i,len(words)) for words in phrases for i in range(len(tokens)) if tokens[i:i+len(words)]==words]
+            if not any(not _denied(tokens,i,i+size) for i,size in positions):continue
+            if not re.search(CONTEXT, normalize(transcript)):continue
+            medicines.append(dict(name=None,strength=None,purpose=purpose,display=purpose+' medicine (name unknown)',match_score=None,status='unknown_name_with_purpose'))
             continue
-        strength = None
-        if end < len(tokens) and re.fullmatch(r'\d+(?:\.\d+)?', tokens[end]):
-            strength = tokens[end]
-        medicines.append({'name': name, 'strength': strength, 'purpose': None,
-                          'display': name + (' ' + strength if strength else ''),
-                          'match_score': round(score, 2), 'status': 'needs_confirmation'})
-    # Explicit ignorance OR purpose-only naming supports an unknown-name entry.
-    purposes = {'BP': r'\bbp\b|blood pressure|ब्लड प्रेशर|बीपी',
-                'sugar': r'\bsugar\b|\bdiabet\w*|शुगर|मधुमेह',
-                'thyroid': r'\bthyroid\b|थायरॉइड|थायराइड'}
-    ignorance = r'yaad nahi|naam nahi|nam nahi|don.t (?:know|remember)|name unknown|नाम.*(?:याद नहीं|नहीं पता)'
-    purpose_matches = [p for p, pattern in purposes.items() if re.search(pattern, text)]
-    # Explicit unknown-name references can follow a sentence break or contrast.
-    segments = [text] if len(purpose_matches) == 1 else re.split(r'[.;।]|\b(?:aur|and|but|lekin)\b', text)
-    for segment in segments:
-        for purpose, pattern in purposes.items():
-            if not re.search(pattern, segment):
-                continue
-            explicit_unknown = re.search(ignorance, segment)
-            purpose_only = re.search(r'(?:ki|ke|ka)\s+(?:goli|dawai|dawa)|medicine|tablet|(?:की|के लिए).*?(?:गोली|गोलियाँ|दवा)', segment)
-            named_in_segment = any(normalize(m['name']).replace(' ', '') in segment.replace(' ', '') for m in medicines)
-            if explicit_unknown or (purpose_only and not named_in_segment):
-                display = purpose + ' medicine (name unknown)'
-                if not any(m['display'] == display for m in medicines):
-                    medicines.append({'name': None, 'strength': None, 'purpose': purpose,
-                                      'display': display, 'match_score': None,
-                                      'status': 'unknown_name_with_purpose'})
+        if not isinstance(name,str):continue
+        raw=normalize(name);raw_tokens=raw.split()
+        if set(raw_tokens)&NON_MEDICINES:continue
+        options=[]
+        for canonical in vocabulary():
+            compact=normalize(canonical).replace(' ','')
+            canonical_tokens=normalize(canonical).split()
+            # A validated multiword identity may include a form/variant suffix.
+            # Confirm its complete vocabulary base, never an arbitrary word.
+            base_prefix=raw_tokens[:len(canonical_tokens)]==canonical_tokens
+            score=100 if base_prefix else ratio(raw.replace(' ',''),compact)
+            if score < (THRESHOLD if fuzzy else 100):continue
+            short=len(compact)<=4
+            for start in range(len(tokens)):
+                for size in range(1,len(raw_tokens)+2):
+                    end=start+size;phrase=tokens[start:end]
+                    if len(phrase)!=size or set(phrase)&NON_MEDICINES or any(t.isdecimal() for t in phrase):continue
+                    if short:
+                        if phrase!=normalize(canonical).split():continue
+                        nearby=' '.join(tokens[max(0,start-4):min(len(tokens),end+4)])
+                        if not ((end<len(tokens) and re.fullmatch(r'\d+(?:\.\d+)?',tokens[end])) or re.search(CONTEXT,nearby)):continue
+                    elif not (base_prefix and phrase==canonical_tokens) and ratio(''.join(phrase),raw.replace(' ','')) < (THRESHOLD if fuzzy else 100):continue
+                    if _denied(tokens,start,end):continue
+                    options.append((score,len(compact),start,end,canonical))
+        if not options:continue
+        score,_,start,end,canonical=max(options,key=lambda v:(v[0],v[1],-v[2]))
+        strength=tokens[end] if end<len(tokens) and re.fullmatch(r'\d+(?:\.\d+)?',tokens[end]) else None
+        medicine=dict(name=canonical,strength=strength,purpose=candidate.get('purpose'),display=canonical+(' '+strength if strength else ''),match_score=round(score,2),status='needs_confirmation')
+        if not any(m['name']==canonical and m['strength']==strength for m in medicines):medicines.append(medicine)
     return medicines
+
+
+def guard_extraction(transcript, checked):
+    """Apply deterministic medicine policy after schema/evidence validation."""
+    import copy
+    result=copy.deepcopy(checked)
+    item=result.get('medicines',{})
+    matches=parse(transcript,extracted=result)
+    if explicit_denial(transcript) and not matches:
+        result['medicines']={'value':[],'status':'ok','evidence':transcript}
+    elif item.get('status')=='ok' and isinstance(item.get('value'),list):
+        if item['value'] and not matches:
+            result['medicines']={'value':None,'status':'unclear','evidence':''}
+        else:
+            result['medicines']=dict(item,value=[{k:m[k] for k in ('name','strength','purpose')} for m in matches])
+    return result
 
 
 def readback(medicines):

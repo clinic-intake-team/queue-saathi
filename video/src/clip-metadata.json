@@ -1,0 +1,44 @@
+{
+  "A": {
+    "file": "clipA.mp4",
+    "frames": 278,
+    "duration": 9.266667,
+    "width": 1920,
+    "height": 1080,
+    "crop": {
+      "x": 736,
+      "y": 54,
+      "width": 448,
+      "height": 972
+    },
+    "sha256": "ff776dc173ee494e2ab3562c9033ce24fffd4f9b8b4a5a79e3e7c83e2f87968c"
+  },
+  "B": {
+    "file": "clipB.mp4",
+    "frames": 217,
+    "duration": 7.233333,
+    "width": 1920,
+    "height": 1080,
+    "crop": {
+      "x": 736,
+      "y": 54,
+      "width": 448,
+      "height": 972
+    },
+    "sha256": "317f49794aac07066c6a3d3d3563fc6e32bbd312070a858d4694d6f3360b583e"
+  },
+  "C": {
+    "file": "clipC.mp4",
+    "frames": 235,
+    "duration": 7.833333,
+    "width": 1920,
+    "height": 1080,
+    "crop": {
+      "x": 736,
+      "y": 54,
+      "width": 448,
+      "height": 972
+    },
+    "sha256": "c669a9e4fb79cd3f861e6d03c152ec8a3d4e3dba5707c6903f196b7498e7d5bd"
+  }
+}

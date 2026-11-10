@@ -1,0 +1,616 @@
+{
+  "frames": 4500,
+  "duration": 150.0,
+  "sections": [
+    {
+      "name": "Clinic queue",
+      "fromFrame": 0,
+      "frames": 120,
+      "kind": "queue",
+      "vo": 1
+    },
+    {
+      "name": "Patient quote",
+      "fromFrame": 120,
+      "frames": 105,
+      "kind": "quote",
+      "vo": 2
+    },
+    {
+      "name": "Logo and intake",
+      "fromFrame": 225,
+      "frames": 240,
+      "kind": "intro",
+      "vo": 3
+    },
+    {
+      "name": "Pipeline",
+      "fromFrame": 465,
+      "frames": 360,
+      "kind": "pipeline",
+      "vo": 4
+    },
+    {
+      "name": "Language choice",
+      "fromFrame": 825,
+      "frames": 180,
+      "kind": "language",
+      "vo": 5
+    },
+    {
+      "name": "Complaint exchange",
+      "fromFrame": 1005,
+      "frames": 285,
+      "kind": "clipA",
+      "vo": 0
+    },
+    {
+      "name": "Duration introduction",
+      "fromFrame": 1290,
+      "frames": 165,
+      "kind": "durationIntro",
+      "vo": 6
+    },
+    {
+      "name": "Duration exchange",
+      "fromFrame": 1455,
+      "frames": 75,
+      "kind": "clipF",
+      "vo": 0
+    },
+    {
+      "name": "Medicine keyterms",
+      "fromFrame": 1530,
+      "frames": 255,
+      "kind": "keyterms",
+      "vo": 7
+    },
+    {
+      "name": "Medicine read-back",
+      "fromFrame": 1785,
+      "frames": 225,
+      "kind": "clipB",
+      "vo": 0
+    },
+    {
+      "name": "Patient red alert",
+      "fromFrame": 2010,
+      "frames": 240,
+      "kind": "clipC",
+      "vo": 0
+    },
+    {
+      "name": "Reception escalation",
+      "fromFrame": 2250,
+      "frames": 195,
+      "kind": "reception",
+      "vo": 8
+    },
+    {
+      "name": "Doctor queue introduction",
+      "fromFrame": 2445,
+      "frames": 210,
+      "kind": "queueIntro",
+      "vo": 9
+    },
+    {
+      "name": "Doctor queue",
+      "fromFrame": 2655,
+      "frames": 120,
+      "kind": "doctorQueue",
+      "vo": 0
+    },
+    {
+      "name": "Doctor evidence introduction",
+      "fromFrame": 2775,
+      "frames": 225,
+      "kind": "doctorIntro",
+      "vo": 10
+    },
+    {
+      "name": "Token 31 evidence",
+      "fromFrame": 3000,
+      "frames": 210,
+      "kind": "doctorRed",
+      "vo": 0
+    },
+    {
+      "name": "Token 14 evidence",
+      "fromFrame": 3210,
+      "frames": 285,
+      "kind": "doctorFever",
+      "vo": 0
+    },
+    {
+      "name": "Evaluation results",
+      "fromFrame": 3495,
+      "frames": 510,
+      "kind": "results",
+      "vo": 11
+    },
+    {
+      "name": "Real results row",
+      "fromFrame": 4005,
+      "frames": 120,
+      "kind": "resultsStats",
+      "vo": 0
+    },
+    {
+      "name": "Principles",
+      "fromFrame": 4125,
+      "frames": 195,
+      "kind": "principles",
+      "vo": 12
+    },
+    {
+      "name": "End card",
+      "fromFrame": 4320,
+      "frames": 180,
+      "kind": "end",
+      "vo": 13
+    }
+  ],
+  "voiceovers": [
+    {
+      "file": "sub_vo01.wav",
+      "text": "Patients wait in long queues… then forget what matters.",
+      "caption": "Patients wait in long queues… then forget what matters.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0,
+      "duration": 3.36,
+      "number": 1,
+      "source_hash": "f69c89b2da9068b170d663ad4f51da36982bdf3ffde92d5ad6e9fca0865ff398",
+      "fromFrame": 3,
+      "frames": 101
+    },
+    {
+      "file": "sub_vo02.wav",
+      "text": "बीपी की गोली लेता हूँ… नाम याद नहीं।",
+      "caption": "BP ki goli leta hoon… naam yaad nahi.",
+      "language": "hi-IN",
+      "voice": "Avinash",
+      "speed": 0.95,
+      "duration": 2.778938,
+      "number": 2,
+      "source_hash": "1e2a4ed29132726f5de0a0edf08ef2a313b6e0c73721eb54f6db63ce1f6e800d",
+      "fromFrame": 123,
+      "frames": 84
+    },
+    {
+      "file": "sub_vo03.wav",
+      "text": "Meet Queue Saathi. While patients wait, they answer a few questions by voice, and the doctor gets a clean summary.",
+      "caption": "Meet QueueSaathi. While patients wait, they answer a few questions by voice, and the doctor gets a clean summary.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0,
+      "duration": 7.2,
+      "number": 3,
+      "source_hash": "f30b7f52d552cb748538dc1c300385d1fbc931c8bac6315c49edbb53f8739db9",
+      "fromFrame": 228,
+      "frames": 216
+    },
+    {
+      "file": "sub_vo04.wav",
+      "text": "Gnani's Timbre asks each question. Gnani's Prisma transcribes the answer. Then the answer is structured, every value is checked in code, and safety checks run on every reply.",
+      "caption": "Gnani's Timbre asks each question. Gnani's Prisma transcribes the answer. Then the answer is structured, every value is checked in code, and safety checks run on every reply.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0,
+      "duration": 11.04,
+      "number": 4,
+      "source_hash": "331fde0237dfc3fa18a51c95777a2c599b67fb793a20fa7d7c97e4564b79df6f",
+      "fromFrame": 468,
+      "frames": 332
+    },
+    {
+      "file": "sub_vo05.wav",
+      "text": "You can speak Hinglish, Hindi or English, however you naturally talk.",
+      "caption": "You can speak Hinglish, Hindi or English, however you naturally talk.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0,
+      "duration": 4.48,
+      "number": 5,
+      "source_hash": "0f15dc8e35fa65e5be5e3234a675e3fc2ef567a04ede2049c7e282a1a50681f4",
+      "fromFrame": 828,
+      "frames": 135
+    },
+    {
+      "file": "sub_vo06.wav",
+      "text": "It moves through short, simple questions, like how long the problem has lasted.",
+      "caption": "It moves through short, simple questions, like how long the problem has lasted.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0,
+      "duration": 5.04,
+      "number": 6,
+      "source_hash": "5738bb3ff17fa2361c2f87f2abd0a90a3d6ed85d211cbba4dec140f0e5b10ea3",
+      "fromFrame": 1293,
+      "frames": 152
+    },
+    {
+      "file": "sub_vo07.wav",
+      "text": "Medicine names are hard to hear, so Prisma gets a list of common Indian medicines, and Timbre reads every medicine back for the patient to confirm.",
+      "caption": "Medicine names are hard to hear, so Prisma gets a list of common Indian medicines, and Timbre reads every medicine back for the patient to confirm.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0,
+      "duration": 7.84,
+      "number": 7,
+      "source_hash": "3eefe3cf5ab69848209796ee1ee59187903fad99c08e9820ee6b6e44565b4a47",
+      "fromFrame": 1533,
+      "frames": 236
+    },
+    {
+      "file": "sub_vo08.wav",
+      "text": "If an answer sounds like an emergency, the intake stops and the patient is sent to reception right away.",
+      "caption": "If an answer sounds like an emergency, the intake stops and the patient is sent to reception right away.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0,
+      "duration": 5.84,
+      "number": 8,
+      "source_hash": "01363eb149eb17a6b1c9425c79f4fb79d6d80382efa48886c2f604a194de9f87",
+      "fromFrame": 2253,
+      "frames": 176
+    },
+    {
+      "file": "sub_vo09.wav",
+      "text": "On the clinic computer, behind a simple PIN, the doctor sees the queue, with urgent patients first.",
+      "caption": "On the clinic computer, behind a simple PIN, the doctor sees the queue, with urgent patients first.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0,
+      "duration": 6.08,
+      "number": 9,
+      "source_hash": "0a259f0c07cd86a206adbf176d12c16bd07181dbf3e75aa74a526a3665fc4fbd",
+      "fromFrame": 2448,
+      "frames": 183
+    },
+    {
+      "file": "sub_vo10.wav",
+      "text": "Each summary follows India's ABDM consultation sections, and every detail links back to the patient's own words.",
+      "caption": "Each summary follows India's ABDM consultation sections, and every detail links back to the patient's own words.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0,
+      "duration": 6.64,
+      "number": 10,
+      "source_hash": "2083af611593ba1c5f180d73e535fda28c85cac42ef669c3e559370b16221824",
+      "fromFrame": 2778,
+      "frames": 200
+    },
+    {
+      "file": "sub_vo11.wav",
+      "text": "We tested it on two hundred seventy-six scripted recordings from two speakers. Medicine name accuracy went from fifty-two to ninety-five percent. All four emergency sessions were flagged, and false alarms dropped from eleven of sixteen to one after we improved our validation.",
+      "caption": "We tested it on 276 scripted recordings from 2 speakers. Medicine-name accuracy: 52% → 95%. All 4 emergency sessions were flagged, and false alarms dropped from 11/16 → 1/16 after we improved our validation.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0,
+      "duration": 16.08,
+      "number": 11,
+      "source_hash": "26cb91b1b0988f338eb448811b7339199d1bed39678e2685af69e86e8a19168c",
+      "fromFrame": 3498,
+      "frames": 483
+    },
+    {
+      "file": "sub_vo12.wav",
+      "text": "It never guesses. It escalates when unsure. And it never makes a diagnosis.",
+      "caption": "It never guesses. It escalates when unsure. And it never makes a diagnosis.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0,
+      "duration": 5.04,
+      "number": 12,
+      "source_hash": "dd9a71db4c522f14b44cc0c3ef47eb802df186f366f9ecbe75c3c52462664259",
+      "fromFrame": 4128,
+      "frames": 152
+    },
+    {
+      "file": "sub_vo13.wav",
+      "text": "Queue Saathi. Your history, before you walk in.",
+      "caption": "QueueSaathi. Your history, before you walk in.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0,
+      "duration": 2.96,
+      "number": 13,
+      "source_hash": "af2116723c00e3558c32abb799167a1e953ab40f037b46c98b38937b97ace716",
+      "fromFrame": 4323,
+      "frames": 89
+    }
+  ],
+  "captions": [
+    {
+      "fromFrame": 3,
+      "toFrame": 104,
+      "text": "Patients wait in long queues… then forget what matters."
+    },
+    {
+      "fromFrame": 123,
+      "toFrame": 206,
+      "text": "BP ki goli leta hoon… naam yaad nahi."
+    },
+    {
+      "fromFrame": 228,
+      "toFrame": 251,
+      "text": "Meet QueueSaathi."
+    },
+    {
+      "fromFrame": 251,
+      "toFrame": 387,
+      "text": "While patients wait, they answer a few questions by voice, and the"
+    },
+    {
+      "fromFrame": 387,
+      "toFrame": 444,
+      "text": "doctor gets a clean summary."
+    },
+    {
+      "fromFrame": 468,
+      "toFrame": 527,
+      "text": "Gnani's Timbre asks each question."
+    },
+    {
+      "fromFrame": 527,
+      "toFrame": 586,
+      "text": "Gnani's Prisma transcribes the answer."
+    },
+    {
+      "fromFrame": 586,
+      "toFrame": 728,
+      "text": "Then the answer is structured, every value is checked in code, and"
+    },
+    {
+      "fromFrame": 728,
+      "toFrame": 799,
+      "text": "safety checks run on every reply."
+    },
+    {
+      "fromFrame": 828,
+      "toFrame": 962,
+      "text": "You can speak Hinglish, Hindi or English, however you naturally talk."
+    },
+    {
+      "fromFrame": 1293,
+      "toFrame": 1421,
+      "text": "It moves through short, simple questions, like how long the problem"
+    },
+    {
+      "fromFrame": 1421,
+      "toFrame": 1444,
+      "text": "has lasted."
+    },
+    {
+      "fromFrame": 1533,
+      "toFrame": 1660,
+      "text": "Medicine names are hard to hear, so Prisma gets a list of common Indian"
+    },
+    {
+      "fromFrame": 1660,
+      "toFrame": 1759,
+      "text": "medicines, and Timbre reads every medicine back for the patient to"
+    },
+    {
+      "fromFrame": 1759,
+      "toFrame": 1768,
+      "text": "confirm."
+    },
+    {
+      "fromFrame": 2253,
+      "toFrame": 2373,
+      "text": "If an answer sounds like an emergency, the intake stops and the patient"
+    },
+    {
+      "fromFrame": 2373,
+      "toFrame": 2428,
+      "text": "is sent to reception right away."
+    },
+    {
+      "fromFrame": 2448,
+      "toFrame": 2587,
+      "text": "On the clinic computer, behind a simple PIN, the doctor sees the queue,"
+    },
+    {
+      "fromFrame": 2587,
+      "toFrame": 2630,
+      "text": "with urgent patients first."
+    },
+    {
+      "fromFrame": 2778,
+      "toFrame": 2883,
+      "text": "Each summary follows India's ABDM consultation sections, and every"
+    },
+    {
+      "fromFrame": 2883,
+      "toFrame": 2977,
+      "text": "detail links back to the patient's own words."
+    },
+    {
+      "fromFrame": 3498,
+      "toFrame": 3640,
+      "text": "We tested it on 276 scripted recordings from 2 speakers."
+    },
+    {
+      "fromFrame": 3640,
+      "toFrame": 3711,
+      "text": "Medicine-name accuracy: 52% → 95%."
+    },
+    {
+      "fromFrame": 3711,
+      "toFrame": 3867,
+      "text": "All 4 emergency sessions were flagged, and false alarms dropped from"
+    },
+    {
+      "fromFrame": 3867,
+      "toFrame": 3980,
+      "text": "11/16 → 1/16 after we improved our validation."
+    },
+    {
+      "fromFrame": 4128,
+      "toFrame": 4163,
+      "text": "It never guesses."
+    },
+    {
+      "fromFrame": 4163,
+      "toFrame": 4209,
+      "text": "It escalates when unsure."
+    },
+    {
+      "fromFrame": 4209,
+      "toFrame": 4279,
+      "text": "And it never makes a diagnosis."
+    },
+    {
+      "fromFrame": 4323,
+      "toFrame": 4336,
+      "text": "QueueSaathi."
+    },
+    {
+      "fromFrame": 4336,
+      "toFrame": 4412,
+      "text": "Your history, before you walk in."
+    },
+    {
+      "fromFrame": 1005,
+      "toFrame": 1101,
+      "text": "Aaj aap kis takleef ke liye aaye hain? Apne shabdon mein bataiye."
+    },
+    {
+      "fromFrame": 1101,
+      "toFrame": 1170,
+      "text": "Mujhe actually 3 din se bukhaar hai"
+    },
+    {
+      "fromFrame": 1170,
+      "toFrame": 1238,
+      "text": "aur gale mein bhi thoda dard hai."
+    },
+    {
+      "fromFrame": 1455,
+      "toFrame": 1496,
+      "text": "Yeh takleef kab se hai?"
+    },
+    {
+      "fromFrame": 1496,
+      "toFrame": 1516,
+      "text": "Three days."
+    },
+    {
+      "fromFrame": 1785,
+      "toFrame": 1862,
+      "text": "Main abhi ke liye toh Dolo 650 le raha hoon."
+    },
+    {
+      "fromFrame": 1862,
+      "toFrame": 1988,
+      "text": "Aapne bataya: Dolo 650. Kya yeh sahi hai?"
+    },
+    {
+      "fromFrame": 2010,
+      "toFrame": 2070,
+      "text": "Haan, mujhe subah se seene mein dard hai"
+    },
+    {
+      "fromFrame": 2070,
+      "toFrame": 2130,
+      "text": "aur bahut bhaari lag raha hai."
+    },
+    {
+      "fromFrame": 2138,
+      "toFrame": 2245,
+      "text": "Yeh zaroori lag raha hai. Kripya abhi reception par bataiye."
+    },
+    {
+      "fromFrame": 3030,
+      "toFrame": 3090,
+      "text": "Haan, mujhe subah se seene mein dard hai"
+    },
+    {
+      "fromFrame": 3090,
+      "toFrame": 3141,
+      "text": "aur bahut bhaari lag raha hai."
+    },
+    {
+      "fromFrame": 3363,
+      "toFrame": 3445,
+      "text": "Main abhi ke liye toh Dolo 650 le raha hoon."
+    }
+  ],
+  "clips": {
+    "clipA": {
+      "file": "clipA.mp4",
+      "frames": 278,
+      "width": 1920,
+      "height": 1080,
+      "source_hash": "ff776dc173ee494e2ab3562c9033ce24fffd4f9b8b4a5a79e3e7c83e2f87968c",
+      "fromFrame": 1005,
+      "silent": false
+    },
+    "clipF": {
+      "file": "clipF.mp4",
+      "frames": 61,
+      "width": 1920,
+      "height": 1080,
+      "source_hash": "604f6275705b652c860e31810b96483bfac875f6768d9ecc3495f929199f5928",
+      "fromFrame": 1455,
+      "silent": false
+    },
+    "clipB": {
+      "file": "clipB.mp4",
+      "frames": 217,
+      "width": 1920,
+      "height": 1080,
+      "source_hash": "317f49794aac07066c6a3d3d3563fc6e32bbd312070a858d4694d6f3360b583e",
+      "fromFrame": 1785,
+      "silent": false
+    },
+    "clipC": {
+      "file": "clipC.mp4",
+      "frames": 235,
+      "width": 1920,
+      "height": 1080,
+      "source_hash": "c669a9e4fb79cd3f861e6d03c152ec8a3d4e3dba5707c6903f196b7498e7d5bd",
+      "fromFrame": 2010,
+      "silent": false
+    },
+    "doctorQueue": {
+      "file": "doctorQueue.mp4",
+      "frames": 120,
+      "width": 1920,
+      "height": 1080,
+      "source_hash": "3273198f448c584209749d484f49eeb5e58c7ef520f43998f1fb57272390cf0e",
+      "fromFrame": 2655,
+      "silent": true
+    },
+    "doctorRed": {
+      "file": "doctorRed.mp4",
+      "frames": 210,
+      "width": 1920,
+      "height": 1080,
+      "source_hash": "43c379076b5c640dec8d157d4533dc306788d893612a448e66d9bd6fc9a4cebd",
+      "fromFrame": 3000,
+      "silent": false
+    },
+    "doctorFever": {
+      "file": "doctorFever.mp4",
+      "frames": 285,
+      "width": 1920,
+      "height": 1080,
+      "source_hash": "31ac5df1b249374e6bc1326543096b91daeda22a5758dd9f667033751a88bcbd",
+      "fromFrame": 3210,
+      "silent": false
+    },
+    "resultsStats": {
+      "file": "resultsStats.mp4",
+      "frames": 120,
+      "width": 1920,
+      "height": 1080,
+      "source_hash": "14c16a8885f8f8d6d09fcd65116ba8db3d33e5430064669e07aa7864d30c1bb5",
+      "fromFrame": 4005,
+      "silent": true
+    }
+  },
+  "music": false
+}

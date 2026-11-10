@@ -30,3 +30,72 @@ Previously captured raw or parsed responses can be revalidated without Groq call
 ## Output preservation
 
 This preflight makes no API calls and does not overwrite version-1 results. On successful completion of the approved run, old CSVs are copied to `setC_per_clip_v1.csv` and `setC_summary_v1.csv` before the current files are replaced. Version-2 per-clip output has 48 rows with condition labels; summaries have 6 rows (overall/ch/tm for each condition). The protocol is fingerprinted in `eval/setC_development_v2_protocol.json`, independently of the earlier frozen protocol. Failure reports may include both development speakers. No baseline results are presented as new measurements before a real run.
+
+
+# Part A v2 code-only re-score (2026-11-07)
+
+This section is the explicitly requested amendment. The historical text above is retained unchanged and its exact original bytes are preserved in SCORING_NOTES_v1.md. In this section, v1 means the completed official Set B v1 and the latest medium-effort Set C development run-2 baseline in the untagged setC CSVs. Older Set C *_v1.csv files and the low-effort experiment are also preserved; neither is silently substituted as the comparison baseline.
+
+## Scope and generation provenance
+
+No prompts, models, keyterms, transcripts, ground truth or original v1 code are changed. Part A never makes Prisma, Groq or evidence-repair calls. Set B uses the original response JSON retained for all 212 rows. Set C uses retained response JSON where available and exact original parsed-generation caches otherwise, located using the frozen run-2 prompt/model/question/transcript cache key. Sanitized v1 extractions are not substituted for original raw generations when originals exist. The runner blocks network/provider entry points and verifies protected v1 file hashes after writing only *_v2 outputs.
+
+## Validation changes
+
+1. An ok red_flag_symptoms=[] requires no evidence. Nonempty safety lists and all other non-null values still require nonempty, verbatim evidence.
+2. evidence=null normalizes to the empty string. This fixes absent optional-field evidence without inventing a quote; a nonempty safety list or another non-null value still fails if its evidence is empty/non-verbatim.
+3. A bare {value,status,evidence} envelope is wrapped only when the requested field set contains exactly one field. Multi-field attribution is never guessed. This includes standalone follow_up schemas when only that field is requested; current Set B F rows request follow_up plus safety, so an ambiguous flat two-field response remains invalid.
+4. Pure nested value/null wrappers normalize to outer value=null. Non-ok status then passes with null; ok/null remains invalid. A phlegm/BP object containing an optional null component is not collapsed. No missing numeric values or question keys are inferred.
+5. Validation remains per field; original clinical type/range/shape checks apply. Each normalization, remaining validation error and negation override is saved separately in v2 output.
+
+## Safety changes
+
+The existing keyword vocabulary is reused. Hindi nasal orthographic variants are normalized for keyword scanning only, leaving transcript/evidence bytes intact. The keyword scan also identifies negated symptom mentions, including negation between symptom words. Inability phrases such as cannot breathe remain positive. A negated mention removes the matching LLM-present safety symptom and changes a validated breathless=true follow-up to false. Independent positive keyword evidence still alerts even if another mention is denied; unknown/unmatched LLM symptom labels are not silently discarded.
+
+A same-session P4 response with a valid ok empty safety list, no safety validation error and no positive keyword/LLM flag counts as a denial. It clears only needs_check from P2/F rows that have no positive flag. P4's own needs_check always remains an alert. Positive keyword or LLM evidence from any row always alerts. Pre-resolution flags and clearing decisions remain in the v2 per-clip output.
+
+Set C recordings are independent edge-case answers, not linked multi-question sessions. No P4 denial is borrowed from another C clip. Existing P2 Set C generations requested complaint only; no unrequested missing safety field is manufactured or counted invalid.
+
+## Scoring changes (complete list)
+
+- Each expected complaint concept is evaluated independently across the summary and symptom entries. Required concept components may be distributed across those passages.
+- Existing chest/heaviness vocabulary is factored into anatomy and heaviness components so coordinated/shared-anatomy wording is accepted. Sentence, comma-clause and contrast boundaries keep negation local in the affirmative matching helper.
+- daily/roz/roj/रोज़ variants are accepted alongside the existing frequency expressions for frequent headaches.
+- Set C uses the same independent component matching policy with its existing concept vocabulary; its previous run-2 scorer already supported distributing severity/onset components across passages.
+- No other synonyms, card-specific exceptions, medicine aliases, duration rules, ground-truth values or numeric tolerances are added. Raw/fuzzy medicine scoring and all metric definitions stay unchanged.
+
+All original v1 result files stay unchanged. New results are setB_per_clip_v2.csv, setB_per_session_v2.csv, setB_summary_v2.csv, setC_per_clip_v2.csv and setC_summary_v2.csv, with side-by-side comparison CSVs and an audit ending in _v2. The Part A gate is STOP after these comparisons; P2 visit_reason, new duration prompts/hours, and one-call evidence repair belong to Part B and are not implemented or called by this run.
+
+Part A implementation verification: negation is confined to comma-delimited clauses as well as sentence/contrast boundaries, so denying an unrelated action in a later clause cannot cancel an earlier positive symptom. Existing composite keyword detection is retained across the full answer, and independent positive keyword evidence always alerts. The first intermediate offline candidate is archived separately under results/partA_candidate1_v2; final v2 files use the corrected implementation.
+
+A standalone denial-only prefix followed by a comma/colon is attached to the following clause; it is not carried across a sentence or contrast boundary. This preserves leading denials while preventing a later unrelated denial from erasing an earlier positive. Intermediate candidate 2 is archived under results/partA_candidate2_v2; neither intermediate candidate is the final v2 summary.
+
+
+# Part B v2: P2/P3 prompts and evidence repair (2026-11-07)
+
+Part A note bytes are preserved in SCORING_NOTES_partA_v2.md. All v1 and Part A CSVs, raw generations, clinical truth, keyterms and scorer modules remain untouched. New outputs end in _partB_v2. No Set B speaking lines, recording contents or dataset-specific examples are used to write the new prompts.
+
+P2 re-extraction adds visit_reason in its own envelope. It holds an explicit non-symptom check-up/follow-up/test-review purpose, or ok/null when none is stated. Clinical symptoms stay in complaint.summary/symptoms, retaining frequency, episode counts and modifiers. A pure check-up may have an empty clinical symptom list. For comparable complaint scoring, reason concepts already present in the unchanged truth can be supported by this new field as well as the existing complaint fields; physical symptom concepts cannot be satisfied by visit_reason alone. A supplementary visit_reason metric is reported separately (n.a. for baselines). Existing complete-record criteria stay comparable: any required visit purpose is already included in complaint correctness. No new drug/symptom aliases or ground-truth values are added.
+
+P3 re-extraction explicitly permits duration_days=0 for same-day onset and known hours under 24. Optional duration_hours is a finite nonnegative number when supported, or null. Missing optional hours is not a validation error. Hours are saved but not scored because the clinical cards provide no hours truth. Ambiguous evening/weekday anchors remain unclear rather than guessed. Existing duration truth and tolerances remain unchanged, including S03 accepting 0 or 1 day and S10's corrected final duration.
+
+One evidence-only repair call is allowed per newly extracted response, aggregating all fields whose non-null value lacks a verbatim quote. It returns only field→exact quote; values and statuses are immutable. Invalid/non-verbatim repair output is not retried until valid. Existing per-field rejection handles remaining errors. Primary, repair and final sanitized responses use separate versioned caches, so quota interruptions during repair never repeat the paid primary call. HTTP retry attempts are separate from the one logical repair; 429 never becomes an invalid field or failed clip.
+
+The shared extract_partB_v2 API applies evidence repair to every supported live-app row. app_extract_v2 exposes it to the separate app_v2 entry point; the original app.py remains unchanged. The existing Streamlit interface is still the Phase 1 shell, not a completed patient conversation flow. In this evaluation only P2/P3 are freshly extracted; all other rows reuse Part A. Set C retains its baseline requested safety fields and its independent-clip interpretation. The model and medium reasoning are unchanged.
+
+Part B is frozen before real calls. A daily-limit HTTP 429 checkpoints and prints Groq's message, wait and derived reset time before exiting cleanly. Minute limits respect retry-after and retry at most five times. Results compare v1, v2 Part A and v2 Part B without overwriting either baseline.
+
+## Clinical v3 — cached keyword regression
+
+Baseline: final `*_partB_v2.csv` results. v3 reuses the same saved transcripts and
+validated extractions, reapplies the new keyword layer with unchanged v2 negation
+and session-resolution handling, and runs the unchanged Part B v2 scorers.
+No ground truth, complaint matching, accuracy denominator or acceptance threshold
+is changed. No STT or LLM calls are made. Historical `other` condition labels are
+not retrospectively reinterpreted as new diagnoses. P7's expanded schema is tested
+separately and takes effect for future extraction.
+
+Both speakers are development data. Set C remains 48 condition-row entries;
+its official red-flag counts are P4 only. The v3 regression also checks every
+non-P4 row for newly raised alerts, so unchanged P4 metrics cannot hide new alerts
+on other questions. This run found zero new alert rows across B and C.

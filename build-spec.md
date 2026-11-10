@@ -48,7 +48,7 @@ Out of scope: real phone line, login, patient records across visits, other langu
 
 ## 3. Credit plan (4,900 credits left)
 
-The docs don't publish per-call cost. **Measure it before building anything** with `step0_credit_test.py`: 2 STT calls (keyterms off/on) and 1 TTS call, noting the balance between each. Record the results in `CREDITS.md`.
+The docs don't publish per-call cost. **Measure it before building anything** with `step0_credit_test.py`: 2 STT calls (keyterms off/on) and 1 TTS call, noting the balance between each. Record the results in `docs/CREDITS.md`.
 
 **Rules:**
 1. **Cache every TTS output.** The question set is fixed, so generate each prompt once, save the WAV in `assets/prompts/`, and never call Timbre for it again. Only the medicine read-back is generated live.

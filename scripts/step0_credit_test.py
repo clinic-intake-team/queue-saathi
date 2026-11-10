@@ -3,7 +3,7 @@
 
 Run from any directory: python3 scripts/step0_credit_test.py
 Dependencies: python3 -m pip install requests python-dotenv
-Record the starting balance and balance after each call in CREDITS.md.
+Record the starting balance and balance after each call in docs/CREDITS.md.
 """
 
 import json
@@ -103,7 +103,7 @@ def main():
                 else:
                     failures += 1
                     print("TTS did not return WAV audio; tts_test.wav was not written.")
-    print("\nNote your final credit balance and record all four balances in CREDITS.md.")
+    print("\nNote your final credit balance and record all four balances in docs/CREDITS.md.")
     return 1 if failures else 0
 
 

@@ -1,0 +1,113 @@
+{
+  "model": "timbre-v3.0",
+  "lines": [
+    {
+      "file": "sub_vo01.wav",
+      "text": "Patients wait in long queues… then forget what matters.",
+      "caption": "Patients wait in long queues… then forget what matters.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0
+    },
+    {
+      "file": "sub_vo02.wav",
+      "text": "बीपी की गोली लेता हूँ… नाम याद नहीं।",
+      "caption": "BP ki goli leta hoon… naam yaad nahi.",
+      "language": "hi-IN",
+      "voice": "Avinash",
+      "speed": 0.95,
+      "duration": 2.7789375
+    },
+    {
+      "file": "sub_vo03.wav",
+      "text": "Meet Queue Saathi. While patients wait, they answer a few questions by voice, and the doctor gets a clean summary.",
+      "caption": "Meet QueueSaathi. While patients wait, they answer a few questions by voice, and the doctor gets a clean summary.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0
+    },
+    {
+      "file": "sub_vo04.wav",
+      "text": "Gnani's Timbre asks each question. Gnani's Prisma transcribes the answer. Then the answer is structured, every value is checked in code, and safety checks run on every reply.",
+      "caption": "Gnani's Timbre asks each question. Gnani's Prisma transcribes the answer. Then the answer is structured, every value is checked in code, and safety checks run on every reply.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0
+    },
+    {
+      "file": "sub_vo05.wav",
+      "text": "You can speak Hinglish, Hindi or English, however you naturally talk.",
+      "caption": "You can speak Hinglish, Hindi or English, however you naturally talk.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0,
+      "duration": 4.48
+    },
+    {
+      "file": "sub_vo06.wav",
+      "text": "It moves through short, simple questions, like how long the problem has lasted.",
+      "caption": "It moves through short, simple questions, like how long the problem has lasted.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0
+    },
+    {
+      "file": "sub_vo07.wav",
+      "text": "Medicine names are hard to hear, so Prisma gets a list of common Indian medicines, and Timbre reads every medicine back for the patient to confirm.",
+      "caption": "Medicine names are hard to hear, so Prisma gets a list of common Indian medicines, and Timbre reads every medicine back for the patient to confirm.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0
+    },
+    {
+      "file": "sub_vo08.wav",
+      "text": "If an answer sounds like an emergency, the intake stops and the patient is sent to reception right away.",
+      "caption": "If an answer sounds like an emergency, the intake stops and the patient is sent to reception right away.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0
+    },
+    {
+      "file": "sub_vo09.wav",
+      "text": "On the clinic computer, behind a simple PIN, the doctor sees the queue, with urgent patients first.",
+      "caption": "On the clinic computer, behind a simple PIN, the doctor sees the queue, with urgent patients first.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0
+    },
+    {
+      "file": "sub_vo10.wav",
+      "text": "Each summary follows India's ABDM consultation sections, and every detail links back to the patient's own words.",
+      "caption": "Each summary follows India's ABDM consultation sections, and every detail links back to the patient's own words.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0
+    },
+    {
+      "file": "sub_vo11.wav",
+      "text": "We tested it on two hundred seventy-six scripted recordings from two speakers. Medicine name accuracy went from fifty-two to ninety-five percent. All four emergency sessions were flagged, and false alarms dropped from eleven of sixteen to one after we improved our validation.",
+      "caption": "We tested it on 276 scripted recordings from 2 speakers. Medicine-name accuracy: 52% → 95%. All 4 emergency sessions were flagged, and false alarms dropped from 11/16 → 1/16 after we improved our validation.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0,
+      "duration": 16.08
+    },
+    {
+      "file": "sub_vo12.wav",
+      "text": "It never guesses. It escalates when unsure. And it never makes a diagnosis.",
+      "caption": "It never guesses. It escalates when unsure. And it never makes a diagnosis.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0,
+      "duration": 5.04
+    },
+    {
+      "file": "sub_vo13.wav",
+      "text": "Queue Saathi. Your history, before you walk in.",
+      "caption": "QueueSaathi. Your history, before you walk in.",
+      "language": "en-IN",
+      "voice": "Avinash",
+      "speed": 1.0
+    }
+  ]
+}

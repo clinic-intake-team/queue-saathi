@@ -1,0 +1,65 @@
+speaker,clip,condition,transcript,medicine,strength,scored,name_correct,strength_correct
+ch,M01,keyterms_off,"हाँ, मैं Telmachiles लेता हूँ रोज़ सुबह 1।",Telma,40,1,0,0
+ch,M01,keyterms_on,"हाँ, मैं Telma H लेता हूँ रोज़ सुबह 1।",Telma,40,1,1,0
+ch,M02,keyterms_off,बुखार के लिए Dolo 650 ले रहा हूँ।,Dolo,650,1,1,1
+ch,M02,keyterms_on,बुखार के लिए Dolo 650 ले रहा हूँ।,Dolo,650,1,1,1
+ch,M03,keyterms_off,Glycomet 500 और Thyronorm 50 दोनों रोज़ लेता हूँ।,Glycomet,500,1,1,1
+ch,M03,keyterms_off,Glycomet 500 और Thyronorm 50 दोनों रोज़ लेता हूँ।,Thyronorm,50,1,1,1
+ch,M03,keyterms_on,"Glycomet 500 और Thyronorm 50, दोनों रोज लेता हूँ।",Glycomet,500,1,1,1
+ch,M03,keyterms_on,"Glycomet 500 और Thyronorm 50, दोनों रोज लेता हूँ।",Thyronorm,50,1,1,1
+ch,M04,keyterms_off,सुबह नाश्ते से पहले Pan 40 और रात को Ecospirin 75।,Pan,40,1,1,1
+ch,M04,keyterms_off,सुबह नाश्ते से पहले Pan 40 और रात को Ecospirin 75।,Ecosprin,75,1,0,0
+ch,M04,keyterms_on,सुबह नाश्ते से पहले Pan 40 और रात को Ecosprin 75।,Pan,40,1,1,1
+ch,M04,keyterms_on,सुबह नाश्ते से पहले Pan 40 और रात को Ecosprin 75।,Ecosprin,75,1,1,1
+ch,M05,keyterms_off,"Amlong 5 लेता हूँ, mostly BP के लिए।",Amlong,5,1,1,1
+ch,M05,keyterms_on,"Amlong 5 लेता हूँ, mostly BP के लिए।",Amlong,5,1,1,1
+ch,M06,keyterms_off,Metformin or atorvastatin generic वाली?,Metformin,,1,1,
+ch,M06,keyterms_off,Metformin or atorvastatin generic वाली?,Atorvastatin,,1,1,
+ch,M06,keyterms_on,Metformin or atorvastatin generic value?,Metformin,,1,1,
+ch,M06,keyterms_on,Metformin or atorvastatin generic value?,Atorvastatin,,1,1,
+ch,M07,keyterms_off,Montel LC की गोली और Asthalin का pump।,Montair LC,,1,0,
+ch,M07,keyterms_off,Montel LC की गोली और Asthalin का pump।,Asthalin,,1,1,
+ch,M07,keyterms_on,Montair LC की गोली और Asthalin का pump।,Montair LC,,1,1,
+ch,M07,keyterms_on,Montair LC की गोली और Asthalin का pump।,Asthalin,,1,1,
+ch,M08,keyterms_off,"शलकाल और apprise D3, calcium और vitamin D के लिए।",Shelcal,,1,0,
+ch,M08,keyterms_off,"शलकाल और apprise D3, calcium और vitamin D के लिए।",Uprise D3,,1,0,
+ch,M08,keyterms_on,"Shelcal और Uprise D3, calcium और vitamin D के लिए।",Shelcal,,1,1,
+ch,M08,keyterms_on,"Shelcal और Uprise D3, calcium और vitamin D के लिए।",Uprise D3,,1,1,
+ch,M09,keyterms_off,Instead of thyronorm 25.,Thyronorm,25,1,1,1
+ch,M09,keyterms_on,Instead of Thyronorm purchase.,Thyronorm,25,1,1,0
+ch,M10,keyterms_off,जानू Met और EcoSprint चल रहा है अभी।,Janumet,,1,0,
+ch,M10,keyterms_off,जानू Met और EcoSprint चल रहा है अभी।,Ecosprin,,1,0,
+ch,M10,keyterms_on,Janumet और Ecosprin चल रहा है अभी।,Janumet,,1,1,
+ch,M10,keyterms_on,Janumet और Ecosprin चल रहा है अभी।,Ecosprin,,1,1,
+ch,M11,keyterms_off,"BP के लिए एक गोली है, but नाम याद नहीं आ रहा, और Pantocid भी।",name_unknown,,0,,
+ch,M11,keyterms_off,"BP के लिए एक गोली है, but नाम याद नहीं आ रहा, और Pantocid भी।",Pantocid,,1,1,
+ch,M11,keyterms_on,"BP के लिए एक गोली है, but नाम याद नहीं आ रहा, और Pantocid भी।",name_unknown,,0,,
+ch,M11,keyterms_on,"BP के लिए एक गोली है, but नाम याद नहीं आ रहा, और Pantocid भी।",Pantocid,,1,1,
+ch,M12,keyterms_off,कभी कभी दर्द हो तो Comiflam ले लेता हूँ।,Combiflam,,1,0,
+ch,M12,keyterms_on,कभी-कभी दर्द हो तो Combiflam ले लेता हूँ।,Combiflam,,1,1,
+ch,M13,keyterms_off,अभी 3 दिन से Azithral 500 चल रहा है।,Azithral,500,1,1,1
+ch,M13,keyterms_on,अभी 3 दिन से Azithral 500 चल रहा है।,Azithral,500,1,1,1
+ch,M14,keyterms_off,सर्दी के लिए Crocin और Citrizin ले रहा हूँ।,Crocin,,1,1,
+ch,M14,keyterms_off,सर्दी के लिए Crocin और Citrizin ले रहा हूँ।,Cetzine,,1,0,
+ch,M14,keyterms_on,सर्दी के लिए Crocin और Cetzine ले रहा हूँ।,Crocin,,1,1,
+ch,M14,keyterms_on,सर्दी के लिए Crocin और Cetzine ले रहा हूँ।,Cetzine,,1,1,
+ch,M15,keyterms_off,ये Rosuvus 10 और Clopileate 75।,Rosuvas,10,1,0,0
+ch,M15,keyterms_off,ये Rosuvus 10 और Clopileate 75।,Clopilet,75,1,0,0
+ch,M15,keyterms_on,ये Rosuvas 10 और Clopilet 75।,Rosuvas,10,1,1,1
+ch,M15,keyterms_on,ये Rosuvas 10 और Clopilet 75।,Clopilet,75,1,1,1
+ch,M16,keyterms_off,"शुगर की 2 गोलियाँ हैं, एक Glycomet है, दूसरी का नाम याद नहीं आ रहा।",Glycomet,,1,1,
+ch,M16,keyterms_off,"शुगर की 2 गोलियाँ हैं, एक Glycomet है, दूसरी का नाम याद नहीं आ रहा।",name_unknown,,0,,
+ch,M16,keyterms_on,"शुगर की 2 गोलियाँ हैं। एक Glycomet है, दूसरी का नाम याद नहीं आ रहा।",Glycomet,,1,1,
+ch,M16,keyterms_on,"शुगर की 2 गोलियाँ हैं। एक Glycomet है, दूसरी का नाम याद नहीं आ रहा।",name_unknown,,0,,
+ch,M17,keyterms_off,Borecoat का inhaler और dairy film।,Budecort,,1,0,
+ch,M17,keyterms_off,Borecoat का inhaler और dairy film।,Deriphyllin,,1,0,
+ch,M17,keyterms_on,Borecot का inhaler और Deriphyllin।,Budecort,,1,0,
+ch,M17,keyterms_on,Borecot का inhaler और Deriphyllin।,Deriphyllin,,1,1,
+ch,M18,keyterms_off,Lantus insulin का injection लगाता हूँ और Glycomet।,Lantus,,1,1,
+ch,M18,keyterms_off,Lantus insulin का injection लगाता हूँ और Glycomet।,Glycomet,,1,1,
+ch,M18,keyterms_on,Lantus insulin का injection लगाता हूँ और Glycomet।,Lantus,,1,1,
+ch,M18,keyterms_on,Lantus insulin का injection लगाता हूँ और Glycomet।,Glycomet,,1,1,
+ch,M19,keyterms_off,"नहीं नहीं, अभी कोई दवाई नहीं ले रहा।",none,,0,,
+ch,M19,keyterms_on,"नहीं नहीं, अभी कोई दवाई नहीं ले रहा।",none,,0,,
+ch,M20,keyterms_off,"हाँ, Telma लेता हूँ। नहीं नहीं, Telma नहीं, Amlong है वो।",Amlong,,1,1,
+ch,M20,keyterms_on,"हाँ, Telma लेता हूँ। नहीं नहीं, Telma नहीं, Amlong है वो।",Amlong,,1,1,

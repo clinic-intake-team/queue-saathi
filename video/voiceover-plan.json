@@ -1,0 +1,64 @@
+{
+  "model": "timbre-v3.0",
+  "voice": "Avinash",
+  "lines": [
+    {
+      "file": "vo01.wav",
+      "text": "Patients wait in long queues… then forget what matters.",
+      "caption": "Patients wait in long queues… then forget what matters.",
+      "language": "en-IN",
+      "speed": 1.0
+    },
+    {
+      "file": "vo02.wav",
+      "text": "बीपी की गोली लेता हूँ, नाम याद नहीं।",
+      "caption": "BP ki goli leta hoon… naam yaad nahi.",
+      "language": "hi-en",
+      "speed": 1.0,
+      "source_file": "vo02_revised.wav"
+    },
+    {
+      "file": "vo03.wav",
+      "text": "Meet Queue Saathi. While you wait, answer a few questions by voice.",
+      "caption": "Meet QueueSaathi. While you wait, answer a few questions by voice.",
+      "language": "en-IN",
+      "speed": 1.0
+    },
+    {
+      "file": "vo04.wav",
+      "text": "Gnani’s Prisma listens. Every answer is checked, never guessed.",
+      "caption": "Gnani’s Prisma listens. Every answer is checked, never guessed.",
+      "language": "en-IN",
+      "speed": 1.0
+    },
+    {
+      "file": "vo05.wav",
+      "text": "Something urgent? You’re told to alert reception right away.",
+      "caption": "Something urgent? You’re told to alert reception right away.",
+      "language": "en-IN",
+      "speed": 1.0
+    },
+    {
+      "file": "vo06.wav",
+      "text": "The doctor gets a clean summary, with the patient’s own words as evidence.",
+      "caption": "The doctor gets a clean summary, with the patient’s own words as evidence.",
+      "language": "en-IN",
+      "speed": 1.0
+    },
+    {
+      "file": "vo07.wav",
+      "text": "In our tests, medicine name recognition accuracy improved from fifty two percent to ninety five percent.",
+      "caption": "In our tests, medicine-name recognition accuracy: 52% → 95%.",
+      "language": "en-IN",
+      "speed": 1.0,
+      "source_file": "vo07_revised.wav"
+    },
+    {
+      "file": "vo08.wav",
+      "text": "Queue Saathi. Your history, before you walk in.",
+      "caption": "QueueSaathi. Your history, before you walk in.",
+      "language": "en-IN",
+      "speed": 1.0
+    }
+  ]
+}

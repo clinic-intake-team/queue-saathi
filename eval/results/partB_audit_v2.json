@@ -1,0 +1,13 @@
+{
+  "phase": "Part B v2",
+  "completed_reextraction_rows": 64,
+  "http_attempts": 54,
+  "prisma_calls": 0,
+  "unique_primary_responses": 54,
+  "unique_evidence_repairs": 0,
+  "baselines_unchanged": true,
+  "generation_protocol_hash": "25dd04132314f5b74b180e0baf115ed0f6eee4087c5b910eec7b84ae5e09ff7c",
+  "reporting_only_fix": "CSV deserialization only: empty optional keyterms to null and cached numeric score cells to integers; no generation/scoring change",
+  "reporting_runner_sha256": "e9c9c7f709c7b3b87df0d939f6b02386406fa08cee0621ccc3f4a254de1d5cca",
+  "offline_finalizer_sha256": "d63e9db560e8ae29d5c886b616c3b6099eece611b00b0f2852fe55bcc0276e95"
+}

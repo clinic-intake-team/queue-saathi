@@ -1,0 +1,239 @@
+{
+  "frames": 1800,
+  "duration": 60.0,
+  "sections": [
+    {
+      "name": "Clinic queue",
+      "fromFrame": 0,
+      "frames": 105
+    },
+    {
+      "name": "Patient quote",
+      "fromFrame": 105,
+      "frames": 90
+    },
+    {
+      "name": "Logo and intake",
+      "fromFrame": 195,
+      "frames": 120
+    },
+    {
+      "name": "Clip A",
+      "fromFrame": 315,
+      "frames": 300
+    },
+    {
+      "name": "Prisma and validation",
+      "fromFrame": 615,
+      "frames": 125
+    },
+    {
+      "name": "Clip B",
+      "fromFrame": 740,
+      "frames": 240
+    },
+    {
+      "name": "Clip C",
+      "fromFrame": 980,
+      "frames": 235
+    },
+    {
+      "name": "Reception",
+      "fromFrame": 1215,
+      "frames": 108
+    },
+    {
+      "name": "Doctor summaries",
+      "fromFrame": 1323,
+      "frames": 199
+    },
+    {
+      "name": "Recorded results",
+      "fromFrame": 1522,
+      "frames": 188
+    },
+    {
+      "name": "End card",
+      "fromFrame": 1710,
+      "frames": 90
+    }
+  ],
+  "voiceovers": [
+    {
+      "file": "vo01.wav",
+      "text": "Patients wait in long queues… then forget what matters.",
+      "caption": "Patients wait in long queues… then forget what matters.",
+      "language": "en-IN",
+      "speed": 1.0,
+      "duration": 3.36,
+      "scene": 0
+    },
+    {
+      "file": "vo02.wav",
+      "text": "बीपी की गोली लेता हूँ, नाम याद नहीं।",
+      "caption": "BP ki goli leta hoon… naam yaad nahi.",
+      "language": "hi-en",
+      "speed": 1.0,
+      "source_file": "vo02_revised.wav",
+      "duration": 2.56,
+      "scene": 1
+    },
+    {
+      "file": "vo03.wav",
+      "text": "Meet Queue Saathi. While you wait, answer a few questions by voice.",
+      "caption": "Meet QueueSaathi. While you wait, answer a few questions by voice.",
+      "language": "en-IN",
+      "speed": 1.0,
+      "duration": 4.0,
+      "scene": 2
+    },
+    {
+      "file": "vo04.wav",
+      "text": "Gnani’s Prisma listens. Every answer is checked, never guessed.",
+      "caption": "Gnani’s Prisma listens. Every answer is checked, never guessed.",
+      "language": "en-IN",
+      "speed": 1.0,
+      "duration": 4.16,
+      "scene": 4
+    },
+    {
+      "file": "vo05.wav",
+      "text": "Something urgent? You’re told to alert reception right away.",
+      "caption": "Something urgent? You’re told to alert reception right away.",
+      "language": "en-IN",
+      "speed": 1.0,
+      "duration": 3.6,
+      "scene": 7
+    },
+    {
+      "file": "vo06.wav",
+      "text": "The doctor gets a clean summary, with the patient’s own words as evidence.",
+      "caption": "The doctor gets a clean summary, with the patient’s own words as evidence.",
+      "language": "en-IN",
+      "speed": 1.0,
+      "duration": 4.08,
+      "scene": 8
+    },
+    {
+      "file": "vo07.wav",
+      "text": "In our tests, medicine name recognition accuracy improved from fifty two percent to ninety five percent.",
+      "caption": "In our tests, medicine-name recognition accuracy: 52% → 95%.",
+      "language": "en-IN",
+      "speed": 1.0,
+      "source_file": "vo07_revised.wav",
+      "duration": 6.24,
+      "scene": 9
+    },
+    {
+      "file": "vo08.wav",
+      "text": "Queue Saathi. Your history, before you walk in.",
+      "caption": "QueueSaathi. Your history, before you walk in.",
+      "language": "en-IN",
+      "speed": 1.0,
+      "duration": 2.8,
+      "scene": 10
+    }
+  ],
+  "overlong": [
+    {
+      "line": 4,
+      "duration": 4.16,
+      "original_scene_seconds": 4.0,
+      "extension_frames": 5
+    },
+    {
+      "line": 5,
+      "duration": 3.6,
+      "original_scene_seconds": 3.0,
+      "extension_frames": 18
+    },
+    {
+      "line": 7,
+      "duration": 6.24,
+      "original_scene_seconds": 5.0,
+      "extension_frames": 38
+    }
+  ],
+  "captions": [
+    {
+      "fromFrame": 0,
+      "toFrame": 101,
+      "text": "Patients wait in long queues… then forget what matters."
+    },
+    {
+      "fromFrame": 105,
+      "toFrame": 182,
+      "text": "BP ki goli leta hoon… naam yaad nahi."
+    },
+    {
+      "fromFrame": 195,
+      "toFrame": 315,
+      "text": "Meet QueueSaathi. While you wait, answer a few questions by voice."
+    },
+    {
+      "fromFrame": 615,
+      "toFrame": 740,
+      "text": "Gnani’s Prisma listens. Every answer is checked, never guessed."
+    },
+    {
+      "fromFrame": 1215,
+      "toFrame": 1323,
+      "text": "Something urgent? You’re told to alert reception right away."
+    },
+    {
+      "fromFrame": 1323,
+      "toFrame": 1446,
+      "text": "The doctor gets a clean summary, with the patient’s own words as evidence."
+    },
+    {
+      "fromFrame": 1522,
+      "toFrame": 1710,
+      "text": "In our tests, medicine-name recognition accuracy: 52% → 95%."
+    },
+    {
+      "fromFrame": 1710,
+      "toFrame": 1794,
+      "text": "QueueSaathi. Your history, before you walk in."
+    },
+    {
+      "fromFrame": 315,
+      "toFrame": 411,
+      "text": "Aaj aap kis takleef ke liye aaye hain? Apne shabdon mein bataiye."
+    },
+    {
+      "fromFrame": 411,
+      "toFrame": 480,
+      "text": "Mujhe actually 3 din se bukhaar hai"
+    },
+    {
+      "fromFrame": 480,
+      "toFrame": 548,
+      "text": "aur gale mein bhi thoda dard hai."
+    },
+    {
+      "fromFrame": 740,
+      "toFrame": 817,
+      "text": "Main abhi ke liye toh Dolo 650 le raha hoon."
+    },
+    {
+      "fromFrame": 817,
+      "toFrame": 943,
+      "text": "Aapne bataya: Dolo 650. Kya yeh sahi hai?"
+    },
+    {
+      "fromFrame": 980,
+      "toFrame": 1040,
+      "text": "Haan, mujhe subah se seene mein dard hai"
+    },
+    {
+      "fromFrame": 1040,
+      "toFrame": 1100,
+      "text": "aur bahut bhaari lag raha hai."
+    },
+    {
+      "fromFrame": 1108,
+      "toFrame": 1215,
+      "text": "Yeh zaroori lag raha hai. Kripya abhi reception par bataiye."
+    }
+  ]
+}

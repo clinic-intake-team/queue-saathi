@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QueueSaathi · Demo end card</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@400;450;500;550;650&display=swap" rel="stylesheet">
+<style>
+:root{font-family:Inter,Arial,sans-serif;color:#f5f7fa;background:#05070d;font-synthesis:none;-webkit-font-smoothing:antialiased}*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#05070d}#stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform:translate(-50%,-50%) scale(var(--scale,1));overflow:hidden;background:#05070d;isolation:isolate;visibility:hidden}body.ready #stage{visibility:visible}body:not(.ready) #stage *{animation-play-state:paused!important}.glow{position:absolute;width:1380px;height:1010px;left:270px;top:35px;background:radial-gradient(ellipse at center,#8fd8f813 0%,#1e9be018 25%,#0b5ea819 44%,transparent 72%);filter:blur(65px);pointer-events:none}.phone-stage{position:absolute;inset:0;display:grid;place-items:center;animation:phone-out .9s cubic-bezier(.4,0,.2,1) 2s forwards;will-change:opacity,transform}.phone-float{animation:phone-in 1.25s cubic-bezier(.2,.75,.25,1) both}.phone{position:relative;width:430px;height:898px;padding:12px;border:2px solid #a4b8cd66;border-radius:58px;background:linear-gradient(135deg,#394753,#0e141c 24%,#080d14 76%,#394753);box-shadow:0 0 0 2px #030509,0 25px 65px #0009,0 0 95px #1e9be01d,inset 0 0 0 2px #c8d9ec18}.screen{position:relative;width:402px;height:870px;border-radius:44px;overflow:hidden;background:#05070d;box-shadow:0 0 0 1px #000}.screen img{display:block;width:100%;height:100%;object-fit:fill}.camera{position:absolute;top:4px;left:calc(50% - 2px);width:5px;height:5px;border-radius:50%;background:#07101a;box-shadow:0 0 0 1px #7895b51a}.phone::before{content:"";position:absolute;left:-5px;top:173px;width:3px;height:74px;border-radius:3px 0 0 3px;background:linear-gradient(#718091,#1e2935)}.phone::after{content:"";position:absolute;right:-5px;top:210px;width:3px;height:96px;border-radius:0 3px 3px 0;background:linear-gradient(#718091,#1e2935)}.wordmark-stage{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;animation:wordmark-in 1.35s cubic-bezier(.2,.65,.2,1) 2.65s forwards;will-change:opacity,transform}.wordmark{display:flex;align-items:center;gap:25px;font-size:96px;font-weight:650;letter-spacing:-4px;line-height:1.15}.logo-icon{display:grid;place-items:center;width:110px;height:110px;flex-shrink:0;border:1.5px solid #64c3f84a;border-radius:30px;color:#8fd8f8;background:linear-gradient(135deg,#173956aa,#0b1725);box-shadow:inset 0 0 28px #4da5df0c,0 0 50px #1e9be00c}.wordmark-light{font-weight:450}.wordmark-dot{color:#57b5ee}.tagline{margin:34px 0 0;color:#c6d7e7;font-size:28px;font-weight:400;letter-spacing:-.4px;line-height:1.5}.tagline em{font-family:'Instrument Serif',Georgia,serif;font-size:39px;font-style:italic;font-weight:400;color:#bde9ff}.credits{margin:28px 0 0;color:#8b9eb2;font-size:15px;font-weight:400;letter-spacing:.35px;line-height:1.7}@keyframes phone-in{from{opacity:0;transform:translateY(38px)}to{opacity:1;transform:translateY(0)}}@keyframes phone-out{from{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(.94) translateY(-8px)}}@keyframes wordmark-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}@media(prefers-reduced-motion:reduce){.phone-stage{display:none;animation:none}.wordmark-stage{opacity:1;animation:none;transform:none}.phone-float{animation:none}}body.static .phone-stage{display:none}body.static .wordmark-stage{opacity:1;animation:none;transform:none}
+</style>
+</head>
+<body>
+<main id="stage" aria-label="QueueSaathi demo end card">
+<div class="glow" aria-hidden="true"></div>
+<div class="phone-stage" aria-hidden="true"><div class="phone-float"><div class="phone"><div class="screen"><img src="screen.png" width="390" height="844" alt=""></div><span class="camera"></span></div></div></div>
+<div class="wordmark-stage">
+<div class="wordmark"><span class="logo-icon" aria-hidden="true"><svg width="67" height="67" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg></span><span>Queue<span class="wordmark-light">Saathi</span><span class="wordmark-dot">.</span></span></div>
+<p class="tagline">Your history, before you <em>walk in.</em></p>
+<p class="credits">Built on Gnani Prisma v3.0 &amp; Timbre v3.0</p>
+</div>
+</main>
+<script>
+function fit(){document.documentElement.style.setProperty('--scale',Math.min(innerWidth/1920,innerHeight/1080))}fit();addEventListener('resize',fit);
+(async()=>{await Promise.all([document.querySelector('.screen img').decode(),document.fonts.load('650 96px Inter'),document.fonts.load('450 96px Inter'),document.fonts.load('italic 39px "Instrument Serif"')]);await document.fonts.ready;if(new URLSearchParams(location.search).has('static'))document.body.classList.add('static');requestAnimationFrame(()=>{document.body.classList.add('ready');window.endcardReady=true})})();
+</script>
+</body>
+</html>

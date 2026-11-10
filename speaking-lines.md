@@ -76,7 +76,7 @@ Question key: **P0** token · **P1** age and sex · **P2** complaint · **P3** d
 
 ### S03: ⚠ Chest pain (RED FLAG)
 | Q | Chill | Teammate |
-|---|---|---|
+|---|---|---|f
 | P0 | "Ikkees." | "Twenty one." |
 | P1 | "Baasath saal, aadmi." | "Sixty two, female." |
 | P2 | "Subah se seene mein dard hai, bhaari bhaari lag raha hai." | "Chest mein pain hai, jaise koi daba raha ho." |
